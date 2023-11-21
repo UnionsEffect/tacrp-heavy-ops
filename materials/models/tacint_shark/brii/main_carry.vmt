@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\tacint_shark\brii\main map"
+      	"$envmap" 			"env_cubemap"
+      	"$bumpmap" "models\tacint_shark\brii\main_normal"
+	"$normalmapalphaenvmapmask" 1
+	
+}
+
