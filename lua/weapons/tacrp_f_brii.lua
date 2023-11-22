@@ -231,6 +231,8 @@ SWEP.AnimationTranslationTable = {
 	["deploy"] = {"unholster"}
 }
 
+SWEP.DeployTimeMult = 2.15
+
 // attachments
 
 SWEP.AttachmentElements = {
