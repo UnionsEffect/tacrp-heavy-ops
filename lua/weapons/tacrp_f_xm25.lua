@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP (Special)"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "9Equipment"
 
-SWEP.Description = "Bullpup grenade launcher with an inbuilt scope. Low muzzle velocity but fires relatively quick. Cannot use alternate ammotypes"
+SWEP.Description = "Bullpup grenade launcher with an inbuilt scope. Low muzzle velocity but fires relatively quick. Grenades have a short safety fuse."
 
 SWEP.Trivia_Caliber = "25x40mm"
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -32,9 +32,9 @@ SWEP.SlotAlt = 4
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        MoveSpeedMult = 0.9,
-        ShootingSpeedMult = 0.6,
-        SightedSpeedMult = 0.75,
+        MoveSpeedMult = 0.75,
+        ShootingSpeedMult = 0.5,
+        SightedSpeedMult = 0.7,
         MeleeSpeedMult = 1,
         ReloadSpeedMult = 0.85,
     },
@@ -55,8 +55,8 @@ SWEP.BalanceStats = {
 
 // "ballistics"
 
-SWEP.ShootEnt = "tacrp_proj_40mm_he"
-SWEP.ShootEntForce = 10000
+SWEP.ShootEnt = "tacrp_proj_25mm_he"
+SWEP.ShootEntForce = 4500
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 1,
@@ -76,7 +76,7 @@ SWEP.Range_Max = 5000
 SWEP.Range_Min = 2000
 
 
-SWEP.MuzzleVelocity = 5000
+SWEP.MuzzleVelocity = 9000
 
 SWEP.Num = 1
 
@@ -107,9 +107,9 @@ SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.85
+SWEP.MoveSpeedMult = 0.8
 SWEP.ShootingSpeedMult = 0.5
-SWEP.SightedSpeedMult = 0.5
+SWEP.SightedSpeedMult = 0.4
 
 SWEP.ReloadSpeedMult = 0.25
 
@@ -171,6 +171,7 @@ SWEP.ClipSize = 5
 SWEP.Ammo = "smg1_grenade"
 
 SWEP.ReloadTimeMult = 1.7
+SWEP.ReloadUpInTime = 1.4
 
 // sounds
 
