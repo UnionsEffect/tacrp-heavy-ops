@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP (Special)"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "9Equipment"
 
-SWEP.Description = "Bullpup grenade launcher with an inbuilt scope. The rounds are relatively weak and have limited range but travel fast. \nLimited alternate ammotypes."
+SWEP.Description = "Bullpup grenade launcher with an inbuilt scope. Low muzzle velocity but fires relatively quick. Cannot use alternate ammotypes"
 
 SWEP.Trivia_Caliber = "25x40mm"
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -76,7 +76,7 @@ SWEP.Range_Max = 5000
 SWEP.Range_Min = 2000
 
 
-SWEP.MuzzleVelocity = 9000
+SWEP.MuzzleVelocity = 5000
 
 SWEP.Num = 1
 
@@ -205,19 +205,19 @@ SWEP.DeployTimeMult = 3
 // attachments
 
 SWEP.Attachments = {
+    --[1] = {
+        --PrintName = "Ammo",
+        --Category = "ammo_40mm",
+        --AttachSound = "TacRP/weapons/m320/shell_in-1.wav",
+        --DetachSound = "TacRP/weapons/m320/shell_out-1.wav",
+    --},
     [1] = {
-        PrintName = "Ammo",
-        Category = "ammo_40mm",
-        AttachSound = "TacRP/weapons/m320/shell_in-1.wav",
-        DetachSound = "TacRP/weapons/m320/shell_out-1.wav",
-    },
-    [2] = {
         PrintName = "Accessory",
         Category = {"acc", "acc_holster"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [3] = {
+    [2] = {
         PrintName = "Perk",
         Category = {"perk", "perk_shooting", "perk_reload", "perk_melee"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
