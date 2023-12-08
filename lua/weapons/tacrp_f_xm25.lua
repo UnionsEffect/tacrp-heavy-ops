@@ -157,7 +157,7 @@ SWEP.ScopedSway = 0.25
 
 SWEP.Scope = true
 SWEP.ScopeOverlay = Material("tacrp/scopes/scopeddot.png", "mips smooth") // Material("path/to/overlay")
-SWEP.ScopeFOV = 90 / 3
+SWEP.ScopeFOV = 90 / 2
 SWEP.ScopeLevels = 1 // 2 = like CS:S
 SWEP.ScopeHideWeapon = true
 
