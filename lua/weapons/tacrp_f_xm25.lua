@@ -32,25 +32,25 @@ SWEP.SlotAlt = 4
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        MoveSpeedMult = 0.75,
+		RPM = 70,
+	
+        MoveSpeedMult = 0.8,
         ShootingSpeedMult = 0.5,
         SightedSpeedMult = 0.7,
         MeleeSpeedMult = 1,
         ReloadSpeedMult = 0.85,
     },
     [TacRP.BALANCE_TTT] = {
-        ReloadTimeMult = 1.25,
-
-        MoveSpeedMult = 0.9,
+		ReloadTimeMult = 1.75,
+		RPM = 65,
+	
+        MoveSpeedMult = 0.75,
         ShootingSpeedMult = 0.6,
         SightedSpeedMult = 0.5,
         MeleeSpeedMult = 1,
         ReloadSpeedMult = 0.5,
+		ClipSize = 4,
     },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        HipFireSpreadPenalty = 0.04,
-        ShootingSpeedMult = 0.6
-    }
 }
 
 // "ballistics"
@@ -84,7 +84,7 @@ SWEP.Num = 1
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 70
+SWEP.RPM = 75
 
 SWEP.Spread = 0.01
 
@@ -240,3 +240,12 @@ addsound("tacint_xm25.Insert_Clip", path .. "magin.wav")
 addsound("tacint_xm25.Bolt_LockBack", path .. "bolt.wav")
 
 SWEP.AutoSpawnable = false
+if engine.ActiveGamemode() == "terrortown" then
+    SWEP.HolsterVisible = false
+    SWEP.Kind = WEAPON_RPG
+    SWEP.CanBuy = { ROLE_TRAITOR, ROLE_DETECTIVE }
+    SWEP.EquipMenuData = {
+        type = "Weapon",
+        desc = "Magazine-fed grenade launcher. Low muzzle velocity but high fire rate.",
+    }
+end
