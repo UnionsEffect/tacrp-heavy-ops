@@ -11,14 +11,19 @@ SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "9Equipment"
 
 SWEP.Description = "Absoultely, unfathomly large rifle shooting an absolutely ludicrous round. The extreme heft of this behemoth means you have to stand still to aim it."
-SWEP.Description_Quote = "\"Sporting purpose\" my ass."
+SWEP.Description_Quote = "Apparently this thing is for \"sporting purposes.\""
 
 SWEP.Trivia_Caliber = ".950 JDJ"
 SWEP.Trivia_Manufacturer = "SSK Industries"
 SWEP.Trivia_Year = "2006"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
-SWEP.Credits = "Assets: Toby Burnside\nSource: Fallout 4: New Vegas Project"
+SWEP.Credits = [[
+Model: RedRogueXIII
+Textures: Rafael De Jongh
+Sounds: KillerExe_01
+Animations: Tactical Intervention, edited by speedonerd
+]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_950jdj.mdl"
 SWEP.WorldModel = "models/weapons/tacint_extras/w_hecate.mdl"
@@ -82,7 +87,7 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.MuzzleVelocity = 30000
 
-SWEP.ShootTimeMult = 1.35
+SWEP.ShootTimeMult = 1.5
 
 // misc. shooting
 
@@ -90,7 +95,7 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Single Shot" // only used externally for firemode name distinction
 
-SWEP.RPM = 50
+SWEP.RPM = 40
 
 SWEP.Spread = 0.003
 
@@ -106,7 +111,7 @@ SWEP.RecoilCrouchMult = 1
 
 SWEP.RecoilVisualKick = 30
 SWEP.RecoilKick = 50
-SWEP.RecoilStability = 0
+SWEP.RecoilStability = 0.85
 
 SWEP.RecoilSpreadPenalty = 0.25
 
@@ -123,8 +128,8 @@ SWEP.ReloadSpeedMult = 0.25
 SWEP.AimDownSightsTime = 0.8
 SWEP.SprintToFireTime = 1
 
-SWEP.Sway = 2.5
-SWEP.ScopedSway = 0.3
+SWEP.Sway = 3.5
+SWEP.ScopedSway = 0.5
 
 SWEP.FreeAimMaxAngle = 12
 
@@ -142,7 +147,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SMG1
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(2, -2, -6)
+SWEP.PassivePos = Vector(2, -3, -7)
 
 SWEP.CustomizeAng = Angle(45, 15, 0)
 SWEP.CustomizePos = Vector(12, 0, -9)
@@ -163,7 +168,7 @@ SWEP.SprintAng = Angle(30, -15, 0)
 SWEP.SprintPos = Vector(5, 0, -4)
 
 SWEP.SightAng = Angle(0.02, 0.11, 0)
-SWEP.SightPos = Vector(-3.835, -7.5, -4.07)
+SWEP.SightPos = Vector(-3.835, -7.5, -2.07)
 
 SWEP.CorrectivePos = Vector(0.21, 0, 0.1)
 SWEP.CorrectiveAng = Angle(0, 0, 0)
@@ -188,7 +193,7 @@ SWEP.ClipSize = 1
 SWEP.Ammo = "357"
 SWEP.AmmoTTT = "ti_sniper"
 
-SWEP.ReloadTimeMult = 2
+SWEP.ReloadTimeMult = 2.1
 SWEP.ReloadUpInTime = 1.5
 
 
@@ -196,7 +201,7 @@ SWEP.ReloadUpInTime = 1.5
 
 local path = "tacint_shark/950jdj/"
 
-SWEP.Sound_Shoot = "^" .. path .. "shoot.wav"
+SWEP.Sound_Shoot = "^" .. path .. "shoot_new.wav"
 SWEP.Sound_Shoot_Silenced = "TacRP/weapons/ak47/ak47_fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 130
@@ -207,7 +212,7 @@ SWEP.ShootPitchVariance = 1 // amount to vary pitch by each shot
 // the .qc attachment for the muzzle
 SWEP.QCA_Muzzle = 1
 
-SWEP.MuzzleEffect = "muzzleflash_1"
+SWEP.MuzzleEffect = "muzzleflash_shotgun"
 
 // anims
 
