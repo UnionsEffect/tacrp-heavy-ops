@@ -10,8 +10,8 @@ SWEP.Category = "Tactical RP (Special)"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "9Equipment"
 
-SWEP.Description = "Absoultely, unfathomly large rifle shooting an absolutely ludicrous round. The extreme heft of this behemoth means you have to stand still to aim it."
-SWEP.Description_Quote = "Apparently this thing is for \"sporting purposes.\""
+SWEP.Description = "Unfathomly large \"hunting rifle\" shooting an unfathomably large round. If this can't kill your target, God help you."
+SWEP.Description_Quote = "Also, how the fuck you are shoulder-firing this thing?"
 
 SWEP.Trivia_Caliber = ".950 JDJ"
 SWEP.Trivia_Manufacturer = "SSK Industries"
