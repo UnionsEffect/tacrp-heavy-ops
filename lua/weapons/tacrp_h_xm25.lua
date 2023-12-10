@@ -32,8 +32,6 @@ SWEP.SlotAlt = 4
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-		RPM = 70,
-	
         MoveSpeedMult = 0.8,
         ShootingSpeedMult = 0.5,
         SightedSpeedMult = 0.7,
@@ -51,6 +49,15 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 0.5,
 		ClipSize = 4,
     },
+	[TacRP.BALANCE_PVE] = {
+		ReloadTimeMult = 1.5,
+		
+		MoveSpeedMult = 0.8,
+		ShootingSpeedMult = 0.7,
+		SightedSpeedMult = 0.7,
+		MeleeSpeedMult = 1,
+		ReloadSpeedMult = 1,
+	},
 }
 
 // "ballistics"
@@ -84,7 +91,7 @@ SWEP.Num = 1
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 75
+SWEP.RPM = 70
 
 SWEP.Spread = 0.01
 
@@ -107,7 +114,7 @@ SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.8
+SWEP.MoveSpeedMult = 0.75
 SWEP.ShootingSpeedMult = 0.5
 SWEP.SightedSpeedMult = 0.4
 

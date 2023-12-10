@@ -32,39 +32,27 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 14,
-        Damage_Min = 10,
+        Damage_Max = 12,
+        Damage_Min = 7,
+		
+		ClipSize = 8,
 
-        MoveSpeedMult = 0.85,
-        ShootingSpeedMult = 0.75,
-        SightedSpeedMult = 0.85,
+        MoveSpeedMult = 0.8,
+        ShootingSpeedMult = 0.5,
+        SightedSpeedMult = 0.8,
         MeleeSpeedMult = 1,
-        ReloadSpeedMult = 1,
+        ReloadSpeedMult = 0.9,
     },
     [TacRP.BALANCE_TTT] = {
         Damage_Max = 11,
-        Damage_Min = 9,
-        Range_Min = 400,
-        Range_Max = 1800,
-        PostBurstDelay = 0.2,
+        Damage_Min = 6,
+        Range_Min = 300,
+        Range_Max = 900,
+		
+		ClipSize = 8,
+		RPM = 200,
 
-        RecoilResetInstant = true,
-        RecoilResetTime = 0.2,
-        RecoilSpreadPenalty = 0.004,
-        RecoilDissipationRate = 18,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 3,
-            [HITGROUP_CHEST] = 1.25,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.9,
-            [HITGROUP_RIGHTARM] = 0.9,
-            [HITGROUP_LEFTLEG] = 0.75,
-            [HITGROUP_RIGHTLEG] = 0.75,
-            [HITGROUP_GEAR] = 0.9
-        },
-
-        ReloadTimeMult = 1.3,
+        ReloadTimeMult = 1.7,
 
         MoveSpeedMult = 0.9,
         ShootingSpeedMult = 0.8,
@@ -73,47 +61,43 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 0.65,
     },
     [TacRP.BALANCE_PVE] = {
-        Damage_Max = 9,
+        Damage_Max = 10,
         Damage_Min = 7,
+		Range_Min = 400,
+		Range_Max = 1200,
 
         MoveSpeedMult = 0.85,
-        ShootingSpeedMult = 0.75,
+        ShootingSpeedMult = 0.8,
         SightedSpeedMult = 0.85,
         MeleeSpeedMult = 1,
         ReloadSpeedMult = 1,
     },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilDissipationRate = 15,
-        RecoilMaximum = 15,
-        RecoilSpreadPenalty = 0.005,
-        HipFireSpreadPenalty = 0.007,
-    }
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.AssaultRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 16
-SWEP.Damage_Min = 12
-SWEP.Range_Min = 1800
-SWEP.Range_Max = 4000
-SWEP.Penetration = 7
-SWEP.ArmorPenetration = 0.8
+SWEP.Damage_Max = 13
+SWEP.Damage_Min = 6
+SWEP.Range_Min = 300
+SWEP.Range_Max = 1000
+SWEP.Penetration = 1
+SWEP.ArmorPenetration = 0.4
 SWEP.Num = 6
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 5,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1.25,
-    [HITGROUP_LEFTARM] = 1,
-    [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.9,
-    [HITGROUP_RIGHTLEG] = 0.9,
-    [HITGROUP_GEAR] = 0.9
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 0.8,
+    [HITGROUP_RIGHTARM] = 0.8,
+    [HITGROUP_LEFTLEG] = 0.75,
+    [HITGROUP_RIGHTLEG] = 0.75,
+    [HITGROUP_GEAR] = 0.8
 }
 
-SWEP.MuzzleVelocity = 24000
+SWEP.MuzzleVelocity = 9000
 
 // misc. shooting
 
@@ -121,32 +105,32 @@ SWEP.Firemode = 2
 
 SWEP.RPM = 240
 
-SWEP.Spread = 0.035
+SWEP.Spread = 0.04
 
 SWEP.JamFactor = 0.05
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 2
-SWEP.RecoilMaximum = 20
+SWEP.RecoilMaximum = 10
 SWEP.RecoilResetTime = 0.1
-SWEP.RecoilDissipationRate = 36
+SWEP.RecoilDissipationRate = 30
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
 SWEP.RecoilVisualKick = 2
 
 SWEP.RecoilKick = 10
-SWEP.RecoilStability = 0.15
+SWEP.RecoilStability = 0.2
 
-SWEP.RecoilSpreadPenalty = 0.01
+SWEP.RecoilSpreadPenalty = 0.015
 SWEP.HipFireSpreadPenalty = 0.025
 
 SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.95
-SWEP.ShootingSpeedMult = 0.7
-SWEP.SightedSpeedMult = 0.7
+SWEP.MoveSpeedMult = 0.78
+SWEP.ShootingSpeedMult = 0.5
+SWEP.SightedSpeedMult = 0.5
 
 SWEP.ReloadSpeedMult = 0.5
 
@@ -156,7 +140,7 @@ SWEP.SprintToFireTime = 0.55
 SWEP.Sway = 1
 SWEP.ScopedSway = 0.125
 
-SWEP.FreeAimMaxAngle = 2
+SWEP.FreeAimMaxAngle = 5
 
 // hold types
 
@@ -195,11 +179,11 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 10
 SWEP.Ammo = "buckshot"
 
-SWEP.ReloadTimeMult = 1.55
+SWEP.ReloadTimeMult = 1.6
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/m4.mdl"
 SWEP.DropMagazineImpact = "metal"
 
-SWEP.ReloadUpInTime = 1.7
+SWEP.ReloadUpInTime = 1.45
 SWEP.DropMagazineTime = 0.8
 
 // sounds
@@ -220,7 +204,7 @@ SWEP.QCA_Muzzle = 1
 // ditto for shell
 SWEP.QCA_Eject = 2
 
-SWEP.MuzzleEffect = "muzzleflash_5"
+SWEP.MuzzleEffect = "muzzleflash_shotgun"
 SWEP.EjectEffect = 3
 
 // anims

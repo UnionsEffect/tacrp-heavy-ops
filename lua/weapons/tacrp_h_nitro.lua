@@ -29,19 +29,19 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        MoveSpeedMult = 0.95,
+        MoveSpeedMult = 0.9,
         ShootingSpeedMult = 0.8,
-        SightedSpeedMult = 0.9,
+        SightedSpeedMult = 0.7,
         MeleeSpeedMult = 1,
         ReloadSpeedMult = 1,
     },
     [TacRP.BALANCE_TTT] = {
-        Range_Min = 150,
+        Range_Min = 500,
         Range_Max = 1500,
 
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 2.5,
-            [HITGROUP_CHEST] = 1,
+            [HITGROUP_HEAD] = 5,
+            [HITGROUP_CHEST] = 2,
             [HITGROUP_STOMACH] = 1,
             [HITGROUP_LEFTARM] = 1,
             [HITGROUP_RIGHTARM] = 1,
@@ -50,29 +50,29 @@ SWEP.BalanceStats = {
             [HITGROUP_GEAR] = 0.9
         },
 
-        ReloadTimeMult = 1.25,
+        ReloadTimeMult = 1.3,
 
-        MoveSpeedMult = 0.95,
-        ShootingSpeedMult = 0.9,
+        MoveSpeedMult = 0.85,
+        ShootingSpeedMult = 0.85,
         MeleeSpeedMult = 1,
         SightedSpeedMult = 0.7,
-        ReloadSpeedMult = 0.8,
+        ReloadSpeedMult = 0.6,
     },
     [TacRP.BALANCE_PVE] = {
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 1.5,
-            [HITGROUP_CHEST] = 1,
+            [HITGROUP_HEAD] = 5,
+            [HITGROUP_CHEST] = 2,
             [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.75,
-            [HITGROUP_RIGHTARM] = 0.75,
+            [HITGROUP_LEFTARM] = 0.8,
+            [HITGROUP_RIGHTARM] = 0.8,
             [HITGROUP_LEFTLEG] = 0.5,
             [HITGROUP_RIGHTLEG] = 0.5,
             [HITGROUP_GEAR] = 0.9
         },
-
-        MoveSpeedMult = 0.95,
-        ShootingSpeedMult = 0.8,
-        SightedSpeedMult = 0.9,
+		
+		MoveSpeedMult = 0.9,
+        ShootingSpeedMult = 0.85,
+        SightedSpeedMult = 0.8,
         MeleeSpeedMult = 1,
         ReloadSpeedMult = 1,
     },
@@ -82,18 +82,18 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 90
-SWEP.Damage_Min = 55
-SWEP.Range_Min = 700
+SWEP.Damage_Max = 35
+SWEP.Damage_Min = 20
+SWEP.Range_Min = 800
 SWEP.Range_Max = 2000
-SWEP.Penetration = 1
-SWEP.ArmorPenetration = 0.45
+SWEP.Penetration = 5
+SWEP.ArmorPenetration = 0.7
 
-SWEP.MuzzleVelocity = 10000
+SWEP.MuzzleVelocity = 11000
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 2,
-    [HITGROUP_CHEST] = 1,
+    [HITGROUP_HEAD] = 5,
+    [HITGROUP_CHEST] = 3,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -111,8 +111,8 @@ SWEP.RPM = 700
 
 SWEP.Spread = 0.0002
 
-SWEP.HipFireSpreadPenalty = 0.01
-SWEP.MidAirSpreadPenalty = 0
+SWEP.HipFireSpreadPenalty = 0.03
+SWEP.MidAirSpreadPenalty = 0.05
 
 SWEP.ShootTimeMult = 0.75
 
@@ -126,7 +126,7 @@ SWEP.RecoilVisualKick = 6
 SWEP.RecoilKick = 15
 SWEP.RecoilAltMultiplier = 200
 
-SWEP.RecoilSpreadPenalty = 0.1
+SWEP.RecoilSpreadPenalty = 0.09
 
 SWEP.CanBlindFire = true
 
@@ -136,7 +136,7 @@ SWEP.MoveSpeedMult = 0.775
 SWEP.ShootingSpeedMult = 0.6
 SWEP.SightedSpeedMult = 0.5
 
-SWEP.ReloadSpeedMult = 0.5
+SWEP.ReloadSpeedMult = 0.7
 
 SWEP.AimDownSightsTime = 0.6
 SWEP.SprintToFireTime = 0.45

@@ -10,8 +10,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "7Sniper Rifle"
 
-SWEP.Description = "Unfathomly large \"hunting rifle\" shooting an unfathomably large round. If this can't kill your target, God help you."
-SWEP.Description_Quote = "Also, how the fuck you are shoulder-firing this thing?"
+SWEP.Description = "Unfathomly large \"hunting rifle\" shooting an unfathomably large round nearly an inch in diameter. \nIf this thing can't kill your target...then God help you. \nEquipped with a 10x scope by default."
 
 SWEP.Trivia_Caliber = ".950 JDJ"
 SWEP.Trivia_Manufacturer = "SSK Industries"
@@ -62,12 +61,14 @@ SWEP.BalanceStats = {
     },
 }
 
+SWEP.Melee = false
+
 // "ballistics"
 
 SWEP.Damage_Max = 300 // damage at minimum range
 SWEP.Damage_Min = 175 // damage at maximum range
 SWEP.Range_Min = 1500 // distance for which to maintain maximum damage
-SWEP.Range_Max = 9000 // distance at which we drop to minimum damage
+SWEP.Range_Max = 6000 // distance at which we drop to minimum damage
 SWEP.Penetration = 40 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 1.5
 SWEP.ArmorBonus = 5
@@ -166,7 +167,7 @@ SWEP.SprintAng = Angle(30, -15, 0)
 SWEP.SprintPos = Vector(5, 0, -4)
 
 SWEP.SightAng = Angle(0.02, 0.11, 0)
-SWEP.SightPos = Vector(-3.835, -7.5, -2.07)
+SWEP.SightPos = Vector(-1.835, -7.5, -4.07)
 
 SWEP.CorrectivePos = Vector(0.21, 0, 0.1)
 SWEP.CorrectiveAng = Angle(0, 0, 0)
@@ -249,7 +250,7 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/optic_off.wav",
         InstalledElements = {"optic"},
         VMScale = 1.05,
-        Pos_VM = Vector(-4.8, 0, 15),
+        Pos_VM = Vector(-4.9, 0, 15),
         Ang_VM = Angle(90, 0, 0),
         Pos_WM = Vector(0, 5.5, 2.2),
         Ang_WM = Angle(0, -90, 0),
@@ -293,7 +294,7 @@ SWEP.Attachments = {
     },
     [8] = {
         PrintName = "Perk",
-        Category = {"perk", "perk_melee", "perk_shooting", "perk_reload"},
+        Category = {"perk", "perk_shooting", "perk_reload"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
     },
