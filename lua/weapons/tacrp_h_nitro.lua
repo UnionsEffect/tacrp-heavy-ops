@@ -41,8 +41,8 @@ SWEP.BalanceStats = {
         Range_Max = 1500,
 
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 5,
-            [HITGROUP_CHEST] = 2,
+            [HITGROUP_HEAD] = 3,
+            [HITGROUP_CHEST] = 1,
             [HITGROUP_STOMACH] = 1,
             [HITGROUP_LEFTARM] = 1,
             [HITGROUP_RIGHTARM] = 1,
@@ -61,7 +61,7 @@ SWEP.BalanceStats = {
     },
     [TacRP.BALANCE_PVE] = {
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 5,
+            [HITGROUP_HEAD] = 3,
             [HITGROUP_CHEST] = 2,
             [HITGROUP_STOMACH] = 1,
             [HITGROUP_LEFTARM] = 0.8,
@@ -83,8 +83,8 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 35
-SWEP.Damage_Min = 20
+SWEP.Damage_Max = 75
+SWEP.Damage_Min = 40
 SWEP.Range_Min = 800
 SWEP.Range_Max = 2000
 SWEP.Penetration = 5
@@ -93,8 +93,8 @@ SWEP.ArmorPenetration = 0.7
 SWEP.MuzzleVelocity = 11000
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 5,
-    [HITGROUP_CHEST] = 3,
+    [HITGROUP_HEAD] = 3,
+    [HITGROUP_CHEST] = 1.35,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
