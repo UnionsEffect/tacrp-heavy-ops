@@ -50,7 +50,7 @@ SWEP.BalanceStats = {
             [HITGROUP_GEAR] = 0.9
         },
 
-        ReloadTimeMult = 1.3,
+        ReloadTimeMult = 1.2,
 
         MoveSpeedMult = 0.85,
         ShootingSpeedMult = 0.85,
@@ -189,7 +189,7 @@ SWEP.Ammo = "357"
 
 SWEP.ReloadUpInTime = 1.8
 
-SWEP.ReloadTimeMult = 1.4
+SWEP.ReloadTimeMult = 1.3
 
 // sounds
 
@@ -236,7 +236,7 @@ SWEP.AnimationTranslationTable = {
     ["melee"] = {"melee1", "melee2"},
 }
 
-SWEP.DeployTimeMult = 2.1
+SWEP.DeployTimeMult = 2
 
 SWEP.LastShot = false
 
@@ -283,7 +283,7 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_holster"},
+        Category = {"acc", "acc_sling"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
@@ -310,9 +310,19 @@ local function addsound(name, spath)
     })
 end
 
+local function addshellsound(name, spath)
+    sound.Add({
+        name = name,
+        channel = 15,
+        volume = 0.9,
+        sound = spath
+    })
+end
+
 --addsound("tacint_nitrorifle.magrelease", path .. "magrelease.wav")
 addsound("tacint_nitrorifle.open", path .. "open.wav")
 addsound("tacint_nitrorifle.close", path .. "close.wav")
 --addsound("tacint_nitrorifle.magout", path .. "insert1.wav")
 addsound("tacint_nitrorifle.magin", path .. "insert.wav")
-addsound("tacint_nitrorifle.unholster", path .. "cloth1.wav")
+addsound("tacint_nitrorifle.unholster", path .. "deploy.wav")
+addshellsound("tacint_nitrorifle.shells", path .. "shells.wav")
