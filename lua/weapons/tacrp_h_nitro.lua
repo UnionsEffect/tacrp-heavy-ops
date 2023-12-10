@@ -20,6 +20,7 @@ SWEP.Trivia_Year = "1988"
 SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = [[
 Assets: Far Cry 4 (Originally ported by Robotnik)
+Additional Sounds: speedonerd
 Animations: speedonerd & 8Z
 ]]
 SWEP.ViewModel = "models/weapons/tacint_shark/v_nitrorifle.mdl"
