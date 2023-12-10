@@ -34,6 +34,8 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
         Range_Min = 700,
         Range_Max = 5000,
+		
+		RecoilVisualKick = 20,
 
         MoveSpeedMult = 0.65,
         ShootingSpeedMult = 0.25,
@@ -222,6 +224,8 @@ SWEP.AnimationTranslationTable = {
     ["blind_fire"] = "shoot1",
     ["reload"] = "reload",
 }
+
+SWEP.DeployTimeMult = 2
 
 SWEP.BulletBodygroups = {
     [1] = {4, 1},
