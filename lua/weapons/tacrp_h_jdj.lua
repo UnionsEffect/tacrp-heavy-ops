@@ -51,8 +51,6 @@ SWEP.BalanceStats = {
         MeleeSpeedMult = 1,
     },
     [TacRP.BALANCE_PVE] = {
-		Description = "Absoultely, unfathomly large rifle shooting an absolutely ludicrous round. The extreme heft severely inhibits movement.",
-		
         Range_Min = 4000,
         Range_Max = 8000,
 
@@ -97,9 +95,9 @@ SWEP.FiremodeName = "Single Shot" // only used externally for firemode name dist
 
 SWEP.RPM = 40
 
-SWEP.Spread = 0.003
+SWEP.Spread = 0.002
 
-SWEP.HipFireSpreadPenalty = 0.06
+SWEP.HipFireSpreadPenalty = 0.2
 SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.RecoilPerShot = 1
