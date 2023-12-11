@@ -177,6 +177,12 @@ SWEP.CanMeleeAttack = true
 SWEP.ClipSize = 5
 SWEP.Ammo = "smg1_grenade"
 
+SWEP.ReloadTimeMult = 1.6
+SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/xm25.mdl"
+SWEP.DropMagazineImpact = "metal"
+
+SWEP.DropMagazineTime = 0.8
+
 SWEP.ReloadTimeMult = 1.7
 SWEP.ReloadUpInTime = 1.4
 

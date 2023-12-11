@@ -180,7 +180,7 @@ SWEP.ClipSize = 10
 SWEP.Ammo = "buckshot"
 
 SWEP.ReloadTimeMult = 1.6
-SWEP.DropMagazineModel = "models/weapons/tacint/magazines/m4.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/jackhammer.mdl"
 SWEP.DropMagazineImpact = "metal"
 
 SWEP.ReloadUpInTime = 1.45
