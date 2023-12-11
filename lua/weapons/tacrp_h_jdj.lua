@@ -86,7 +86,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.5
 }
 
-SWEP.MuzzleVelocity = 30000
+SWEP.MuzzleVelocity = 20000
 
 SWEP.ShootTimeMult = 1.5
 
