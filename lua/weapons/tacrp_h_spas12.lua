@@ -19,7 +19,7 @@ SWEP.Trivia_Year = "1979"
 SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = [[
 Model & Textures: Stoke
-Sounds: iFlip
+Sounds: iFlip & speedonerd
 Animations: Tactical Intervention, edited by speedonerd
 ]]
 
@@ -206,7 +206,7 @@ SWEP.ReloadTimeMult = 1.1
 local path = "TacRP/weapons/fp6/fp6_"
 local path1 = "tacint_shark/spas/"
 
-SWEP.Sound_Shoot = "^" .. path1 .. "spas_shoot_pump.wav"
+SWEP.Sound_Shoot = "^" .. path1 .. "fire_pump.wav"
 SWEP.Sound_Shoot_Silenced = "TacRP/weapons/sg551/sg551_fire_silenced-1.wav"
 
 SWEP.Vol_Shoot = 130
