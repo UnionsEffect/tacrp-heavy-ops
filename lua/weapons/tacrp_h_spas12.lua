@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "5Shotgun"
 
-SWEP.Description = "Combat shotgun with imposing, futuristic looks. Made famous through action cinema."
+SWEP.Description = "Combat shotgun with imposing, futuristic looks, made famous through action cinema. Heavy frame gives the weapon stable recoil. \nFolding stock blocks the use of optics."
 
 SWEP.Trivia_Caliber = "12 Gauge"
 SWEP.Trivia_Manufacturer = "Luigi Franchi S.p.A."
@@ -26,27 +26,29 @@ Animations: Tactical Intervention, edited by speedonerd
 SWEP.ViewModel = "models/weapons/tacint_shark/v_spas12.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_fp6.mdl"
 
-SWEP.Slot = 2
-SWEP.SlotAlt = 3
+SWEP.Slot = 3
+SWEP.SlotAlt = 4
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 14,
+        Damage_Max = 10,
         Damage_Min = 5,
-        ClipSize = 8,
+		Range_Min = 600,
+		ClipSize = 8,
+		
+		ReloadTimeMult = 1.15,
 
-        MoveSpeedMult = 0.9,
+        MoveSpeedMult = 0.85,
         ShootingSpeedMult = 0.8,
-        SightedSpeedMult = 0.9,
+        SightedSpeedMult = 0.77,
         MeleeSpeedMult = 1,
         ReloadSpeedMult = 1,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 9,
+        Damage_Max = 8,
         Damage_Min = 4,
         Range_Min = 250,
-        Range_Max = 1500,
-        Num = 8,
+        Range_Max = 1000,
         ClipSize = 8,
 
         Spread = 0.03,
@@ -65,7 +67,7 @@ SWEP.BalanceStats = {
             [HITGROUP_GEAR] = 0.9
         },
 
-        ReloadTimeMult = 1.25,
+        ReloadTimeMult = 1.28,
 
         MoveSpeedMult = 0.9,
         ShootingSpeedMult = 0.5,
@@ -76,7 +78,12 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_PVE] = {
         Damage_Max = 10,
         Damage_Min = 5,
-        ClipSize = 7,
+        ClipSize = 6,
+		Range_Min = 300,
+		Range_Max = 1200,
+		
+		Spread = 0.02,
+		ShotgunPelletSpread = 0.002,
 
         MoveSpeedMult = 0.9,
         ShootingSpeedMult = 0.8,
@@ -84,22 +91,18 @@ SWEP.BalanceStats = {
         MeleeSpeedMult = 1,
         ReloadSpeedMult = 1,
     },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilDissipationRate = 1.5,
-        RecoilSpreadPenalty = 0.03
-    }
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
-SWEP.Damage_Max = 15
-SWEP.Damage_Min = 6
-SWEP.Range_Min = 900 // distance for which to maintain maximum damage
-SWEP.Range_Max = 3000 // distance at which we drop to minimum damage
+SWEP.Damage_Max = 10
+SWEP.Damage_Min = 8
+SWEP.Range_Min = 600 // distance for which to maintain maximum damage
+SWEP.Range_Max = 1500 // distance at which we drop to minimum damage
 SWEP.Penetration = 1 // units of metal this weapon can penetrate
-SWEP.Num = 6
+SWEP.Num = 8
 SWEP.ArmorPenetration = 0.7
 SWEP.ArmorBonus = 1.5
 
@@ -120,12 +123,12 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 65
+SWEP.RPM = 62
 
 SWEP.Spread = 0.03
 SWEP.ShotgunPelletSpread = 0.005
 
-SWEP.ShootTimeMult = 0.8
+SWEP.ShootTimeMult = 0.95
 
 SWEP.HipFireSpreadPenalty = 0.015
 SWEP.MidAirSpreadPenalty = 0
@@ -139,23 +142,23 @@ SWEP.RecoilDissipationRate = 1.15
 SWEP.RecoilFirstShotMult = 1.2
 
 SWEP.RecoilVisualKick = 2
-SWEP.RecoilKick = 12
-SWEP.RecoilStability = 0.5
+SWEP.RecoilKick = 10
+SWEP.RecoilStability = 0.7
 
-SWEP.RecoilSpreadPenalty = 0.025
+SWEP.RecoilSpreadPenalty = 0.015
 
 SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.925
-SWEP.ShootingSpeedMult = 0.75
-SWEP.SightedSpeedMult = 0.75
+SWEP.MoveSpeedMult = 0.8
+SWEP.ShootingSpeedMult = 0.7
+SWEP.SightedSpeedMult = 0.5
 
 SWEP.ReloadSpeedMult = 0.5
 
-SWEP.AimDownSightsTime = 0.3
-SWEP.SprintToFireTime = 0.35
+SWEP.AimDownSightsTime = 0.4
+SWEP.SprintToFireTime = 0.5
 
 SWEP.Sway = 0.75
 SWEP.ScopedSway = 0.2
@@ -250,19 +253,6 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     [1] = {
-        PrintName = "Optic",
-        Category = {"optic_cqb", "optic_medium"},
-        Bone = "ValveBiped.FP6_base",
-        InstalledElements = {"sights"},
-        AttachSound = "TacRP/weapons/optic_on.wav",
-        DetachSound = "TacRP/weapons/optic_off.wav",
-        VMScale = 0.9,
-        Pos_VM = Vector(-5.9, 0.075, 6),
-        Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(11, 1.5, -5.5),
-        Ang_WM = Angle(0, 0, 180),
-    },
-    [2] = {
         PrintName = "Tactical",
         Category = "tactical",
         Bone = "ValveBiped.forearm",
@@ -275,31 +265,31 @@ SWEP.Attachments = {
         Ang_VM = Angle(-90, 90, -0),
         Ang_WM = Angle(0, 0, 90),
     },
-    [3] = {
+    [2] = {
         PrintName = "Accessory",
         Category = {"acc", "acc_sling", "acc_duffle", "acc_foldstock"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [4] = {
+    [3] = {
         PrintName = "Bolt",
         Category = {"bolt_automatic", "bolt_spas"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [5] = {
+    [4] = {
         PrintName = "Trigger",
         Category = {"trigger_manual", "trigger_spas"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [6] = {
+    [5] = {
         PrintName = "Ammo",
         Category = {"ammo_shotgun"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [7] = {
+    [6] = {
         PrintName = "Perk",
         Category = {"perk", "perk_melee", "perk_shooting", "perk_reload"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
