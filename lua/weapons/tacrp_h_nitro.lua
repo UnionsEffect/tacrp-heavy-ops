@@ -24,7 +24,7 @@ Additional Sounds: speedonerd
 Animations: speedonerd & 8Z
 ]]
 SWEP.ViewModel = "models/weapons/tacint_shark/v_nitrorifle.mdl"
-SWEP.WorldModel = "models/weapons/tacint_shark/w_dbshotgun.mdl"
+SWEP.WorldModel = "models/weapons/tacint_shark/w_nitrorifle.mdl"
 
 SWEP.Slot = 2
 
@@ -259,28 +259,30 @@ SWEP.Attachments = {
         PrintName = "Optic",
         Category = {"optic_cqb", "optic_medium", "optic_sniper"},
         Bone = "db_barrels",
+		WMBone = "Box01",
         AttachSound = "TacRP/weapons/optic_on.wav",
         DetachSound = "TacRP/weapons/optic_off.wav",
 		InstalledElements = {"optic"},
         VMScale = 1,
-        WMScale = 0.8,
+        WMScale = 1,
         Pos_VM = Vector(0, -2, -0.55),
-        Pos_WM = Vector(8, 1, -5.5),
+        Pos_WM = Vector(10, 1.3, 1.55),
         Ang_VM = Angle(90, 0, -90),
-        Ang_WM = Angle(-20, 3.5, 180),
+        Ang_WM = Angle(0, 0, -90),
     },
     [2] = {
         PrintName = "Tactical",
         Category = "tactical",
         Bone = "db_barrels",
+		WMBone = "Box01",
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         VMScale = 1.1,
         WMScale = 1.25,
         Pos_VM = Vector(0, -0.22, 18),
-        Pos_WM = Vector(18, 0.5, -8),
+        Pos_WM = Vector(25, 3, 1.6),
         Ang_VM = Angle(90, 0, 90),
-        Ang_WM = Angle(-25, 3.5, 0),
+        Ang_WM = Angle(0, 0, 90),
     },
     [3] = {
         PrintName = "Accessory",

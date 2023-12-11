@@ -24,10 +24,10 @@ Animations: Tactical Intervention, edited by speedonerd
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_spas12.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_fp6.mdl"
+SWEP.WorldModel = "models/weapons/tacint_shark/w_spas12.mdl"
 
-SWEP.Slot = 3
-SWEP.SlotAlt = 4
+SWEP.Slot = 2
+SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
@@ -260,8 +260,9 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         InstalledElements = {"tactical"},
         VMScale = 1.1,
+        WMScale = 1.1,
         Pos_VM = Vector(1.2, -10, -0.5),
-        Pos_WM = Vector(25, 1.5, -4.5),
+        Pos_WM = Vector(24, 1.75, -4.5),
         Ang_VM = Angle(-90, 90, -0),
         Ang_WM = Angle(0, 0, 90),
     },

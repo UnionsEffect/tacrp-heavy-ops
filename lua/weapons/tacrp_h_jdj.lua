@@ -5,12 +5,12 @@ AddCSLuaFile()
 
 // names and stuff
 SWEP.PrintName = "SSK .950 JDJ"
-SWEP.Category = "Tactical RP"
+SWEP.Category = "Tactical RP (Special)"
 
 SWEP.SubCatTier = "9Special"
-SWEP.SubCatType = "7Sniper Rifle"
+SWEP.SubCatType = "9Equipment"
 
-SWEP.Description = "Unfathomly large \"hunting rifle\" shooting an unfathomably large round nearly an inch in diameter. \nIf this thing can't kill your target...then God help you. \nEquipped with a 10x scope by default."
+SWEP.Description = "Unfathomly large \"hunting rifle\" shooting an unfathomably large round nearly an inch in diameter. \nIf this thing can't kill your target...God help you. \nEquipped with a 10x scope by default."
 
 SWEP.Trivia_Caliber = ".950 JDJ"
 SWEP.Trivia_Manufacturer = "SSK Industries"
@@ -25,10 +25,10 @@ Animations: Tactical Intervention, edited by speedonerd
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_950jdj.mdl"
-SWEP.WorldModel = "models/weapons/tacint_extras/w_hecate.mdl"
+SWEP.WorldModel = "models/weapons/tacint_shark/w_950jdj.mdl"
 
-SWEP.Slot = 4
-SWEP.SlotAlt = 5
+SWEP.Slot = 3
+SWEP.SlotAlt = 4
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
@@ -254,10 +254,11 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/optic_off.wav",
         InstalledElements = {"optic"},
         VMScale = 1.05,
+        WMScale = 1.05,
         Pos_VM = Vector(-4.9, 0, 15),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(0, 5.5, 2.2),
-        Ang_WM = Angle(0, -90, 0),
+        Pos_WM = Vector(13.5, 0.5, 1.7),
+        Ang_WM = Angle(0, 0, -90),
     },
     [3] = {
         PrintName = "Tactical",
@@ -267,10 +268,11 @@ SWEP.Attachments = {
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
 		VMSCale = 1.05,
+		WMSCale = 1.05,
         Pos_VM = Vector(-3.2, -0.9, 32),
         Ang_VM = Angle(90, 0, 270),
-        Pos_WM = Vector(0, 23.75, -2),
-        Ang_WM = Angle(0, -90, 180),
+        Pos_WM = Vector(30, 2, 0.85),
+        Ang_WM = Angle(0, 0, 180),
     },
     [4] = {
         PrintName = "Accessory",

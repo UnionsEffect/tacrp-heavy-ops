@@ -26,7 +26,7 @@ Animations: Tactical Intervention, edited by speedonerd
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_jackhammer.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_aug.mdl"
+SWEP.WorldModel = "models/weapons/tacint_shark/w_jackhammer.mdl"
 
 SWEP.Slot = 2
 
@@ -247,7 +247,7 @@ SWEP.Attachments = {
 		InstalledElements = {"rail"},
         Pos_VM = Vector(-8.3, -0.1, 4.25),
         Ang_VM = Angle(90, 0, -0.8),
-        Pos_WM = Vector(4.5, 1, -7),
+        Pos_WM = Vector(6, 1.65, -8.75),
         Ang_WM = Angle(0, 0, 180),
     },
     [2] = {
@@ -258,10 +258,11 @@ SWEP.Attachments = {
         DetachSound = "tacrp/weapons/flashlight_off.wav",
         InstalledElements = {"tactical"},
 		VMScale = 1.1,
+		WMScale = 1.1,
         Pos_VM = Vector(-4, -0.8, 13),
         Ang_VM = Angle(90, 0, -90),
-        Pos_WM = Vector(14, 1, -6),
-        Ang_WM = Angle(0, 0, 180),
+        Pos_WM = Vector(12, 2.5, -4.5),
+        Ang_WM = Angle(0, 0, 90),
     },
     [3] = {
         PrintName = "Accessory",

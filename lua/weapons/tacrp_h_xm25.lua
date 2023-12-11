@@ -23,7 +23,7 @@ Animation: Tactical Intervention, edited by speedonerd
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_xm25.mdl"
-SWEP.WorldModel = "models/weapons/tacint_shark/w_chinalake.mdl"
+SWEP.WorldModel = "models/weapons/tacint_shark/w_xm25.mdl"
 
 SWEP.NoRanger = true
 
@@ -130,12 +130,12 @@ SWEP.FreeAimMaxAngle = 8
 
 // hold types
 
-SWEP.HoldType = "smg1"
+SWEP.HoldType = "smg"
 SWEP.HoldTypeSprint = "passive"
 SWEP.HoldTypeBlindFire = false
 
 SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
-SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
+SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
 SWEP.PassiveAng = Angle(0, 0, 0)
 SWEP.PassivePos = Vector(0, -3, -6)
