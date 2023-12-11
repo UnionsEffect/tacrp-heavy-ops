@@ -39,25 +39,25 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 0.85,
     },
     [TacRP.BALANCE_TTT] = {
-		ReloadTimeMult = 1.75,
-		RPM = 65,
-	
+        ReloadTimeMult = 1.75,
+        RPM = 65,
+
         MoveSpeedMult = 0.75,
         ShootingSpeedMult = 0.6,
         SightedSpeedMult = 0.5,
         MeleeSpeedMult = 1,
         ReloadSpeedMult = 0.5,
-		ClipSize = 4,
+        ClipSize = 4,
     },
-	[TacRP.BALANCE_PVE] = {
-		ReloadTimeMult = 1.5,
-		
-		MoveSpeedMult = 0.8,
-		ShootingSpeedMult = 0.7,
-		SightedSpeedMult = 0.7,
-		MeleeSpeedMult = 1,
-		ReloadSpeedMult = 1,
-	},
+    [TacRP.BALANCE_PVE] = {
+        ReloadTimeMult = 1.5,
+
+        MoveSpeedMult = 0.8,
+        ShootingSpeedMult = 0.7,
+        SightedSpeedMult = 0.7,
+        MeleeSpeedMult = 1,
+        ReloadSpeedMult = 1,
+    },
 }
 
 // "ballistics"
@@ -93,7 +93,7 @@ SWEP.Firemode = 1
 
 SWEP.RPM = 70
 
-SWEP.Spread = 0.01
+SWEP.Spread = 0
 
 SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 2
@@ -263,15 +263,23 @@ if engine.ActiveGamemode() == "terrortown" then
     }
 end
 
+local last_laze_time = 0
+-- local last_laze_dist = 0
+local laze_interval = 0.2
+local ccip_v = 0
+local ccip_t = 0
+local ccip_visible = false
+local dropalpha = 0
+local dropalpha2 = 0
+
 local lastrangefinder = 0
 local rftime = 1 / 10
 local rawdist = 0
-local mat_rf = Material("tacrp/hud/rangefinder.png", "mips smooth")
 function SWEP.TacticalDraw(self)
     local txt = "NO RTN"
     local txt2 = ""
-    local txt3 = ""
-    local txt4 = ""
+
+    if !self:IsInScope() or self:GetReloading() then return end
 
     if lastrangefinder + rftime < CurTime() then
         local tr = util.TraceLine({
@@ -291,55 +299,10 @@ function SWEP.TacticalDraw(self)
             txt = tostring(dist) .. "HU"
         end
 
-        if TacRP.ConVars["physbullet"]:GetBool() then
-            -- Not totally accurate due to hitscan kicking in up close
-            local t = math.Round(rawdist / self:GetValue("MuzzleVelocity"), 2)
-            txt2 = tostring(math.Round(rawdist / self:GetValue("MuzzleVelocity"), 2)) .. "s"
-            if t > 0 and t < 1 then txt2 = string.sub(txt2, 2) end
-        else
-            -- Not totally accurate due to hitscan kicking in up close
-            if !TacRP.ConVars["metricunit"]:GetBool() then
-                txt2 = tostring(math.min(math.Round(rawdist * TacRP.HUToM, 0), 99999)) .. "m"
-            else
-                txt2 = tostring(math.min(math.Round(rawdist, 0), 99999)) .. "HU"
-            end
-        end
+        txt2 = ccip_t and (tostring(math.Round(ccip_t, 2)) .. "s") or ""
 
         local edmg = self:GetDamageAtRange(rawdist)
         edmg = math.ceil(edmg)
-
-        txt3 = tostring(edmg) .. "DMG"
-
-        for _ = 0, 12 - string.len(txt3) - string.len(txt) do
-            txt = txt .. " "
-        end
-
-        txt = txt .. txt3
-
-        local mult = self:GetBodyDamageMultipliers() --self:GetValue("BodyDamageMultipliers")
-        local min = math.min(unpack(mult))
-
-        if edmg * min >= 100 then
-            txt4 = "LETHAL"
-        elseif edmg * mult[HITGROUP_LEFTLEG] >= 100 then
-            txt4 = "LEGS"
-        elseif edmg * mult[HITGROUP_LEFTARM] >= 100 then
-            txt4 = "ARMS"
-        elseif edmg * mult[HITGROUP_STOMACH] >= 100 then
-            txt4 = "STMCH"
-        elseif edmg * mult[HITGROUP_CHEST] >= 100 then
-            txt4 = "CHEST"
-        elseif edmg * mult[HITGROUP_HEAD] >= 100 then
-            txt4 = "HEAD"
-        else
-            txt4 = tostring(math.ceil(100 / edmg)) .. (self:GetValue("Num") > 1 and "PTK" or "STK")
-        end
-
-        for _ = 0, 12 - string.len(txt4) - string.len(txt2) do
-            txt2 = txt2 .. " "
-        end
-
-        txt2 = txt2 .. txt4
 
         cached_txt = txt
         cached_txt2 = txt2
@@ -355,37 +318,26 @@ function SWEP.TacticalDraw(self)
     local w = TacRP.SS(100)
     local h = TacRP.SS(50)
 
-    local x = (scrw - w) / 2
-    local y = (scrh - h) * 5 / 6
-
-    surface.SetMaterial(mat_rf)
-    surface.SetDrawColor(255, 255, 255, 100)
-    surface.DrawTexturedRect(x, y, w, h)
+    local x = (scrw - w) * 0.4
+    local y = (scrh - h) * 0.4
 
     surface.SetFont("TacRP_HD44780A00_5x8_10")
-    -- local tw = surface.GetTextSize(txt)
-    surface.SetTextPos(x + TacRP.SS(3), y + TacRP.SS(12))
-    surface.SetTextColor(0, 0, 0)
-    surface.DrawText(txt)
 
-    -- local tw2 = surface.GetTextSize(txt2)
-    surface.SetTextPos(x + TacRP.SS(3), y + TacRP.SS(22))
-    surface.SetTextColor(0, 0, 0)
+    surface.SetTextColor(0, 0, 0, 200)
+    surface.SetTextPos(x + TacRP.SS(3) + 2, y + TacRP.SS(12) + 2)
+    surface.DrawText(txt)
+    surface.SetTextPos(x + TacRP.SS(3) + 2, y + TacRP.SS(22) + 2)
     surface.DrawText(txt2)
+
+    surface.SetTextColor(255, 255, 255)
+    surface.SetTextPos(x + TacRP.SS(3), y + TacRP.SS(12))
+    surface.DrawText(txt)
+    surface.SetTextPos(x + TacRP.SS(3), y + TacRP.SS(22))
+    surface.DrawText(txt2)
+
 end
 
-local last_laze_time = 0
--- local last_laze_dist = 0
-local laze_interval = 0.2
-local ccip_v = 0
-local dropalpha = 0
-local dropalpha2 = 0
-local frac = 0
 function SWEP.TacticalCrosshair(self, x, y, spread, sway)
-
-    if self:GetNextPrimaryFire() + 0.1 > CurTime() then
-        dropalpha2 = 0
-    end
 
     if self:IsInScope() and (self:GetValue("ScopeOverlay") or !self:GetReloading()) then
         dropalpha = math.Approach(dropalpha, self:GetSightAmount() ^ 2, FrameTime() * 1)
@@ -396,43 +348,54 @@ function SWEP.TacticalCrosshair(self, x, y, spread, sway)
     end
     if dropalpha == 0 then return end
 
-    frac = math.Clamp((rawdist - self:GetValue("Range_Min")) / (self:GetValue("Range_Max") - self:GetValue("Range_Min")), 0, 1)
-    if self:GetValue("Damage_Min") <= self:GetValue("Damage_Max") then frac = 1 - frac end
-
-    surface.DrawCircle(x, y, 16, 255, 255, 255, dropalpha * 80)
-    surface.SetDrawColor(255, 255, 255, dropalpha * 60 * frac + 20)
-    surface.DrawLine(x - 16, y, x + 16, y)
-    surface.DrawLine(x, y + 16, x, y - 16)
-
-    if !TacRP.ConVars["physbullet"]:GetBool() then return end
-
     if last_laze_time + laze_interval <= CurTime() then
         last_laze_time = CurTime()
-        local ccip = self:GetCCIP()
+        local ccip, t, steps = self:GetCCIP()
+        ccip_t = t
 
         if !ccip then
             ccip_v = 0
         else
-            cam.Start3D(nil, nil, self.ViewModelFOV)
-            ccip_v = (ccip.HitPos:ToScreen().y - (ScrH() / 2)) * self:GetCorVal()
-            -- local localhp = mdl:WorldToLocal(ccip.HitPos)
-            -- local localpos = mdl:WorldToLocal(pos)
-            -- ccip_v = (localpos.z - localhp.z)
+            ccip_visible = 1
+            for i, v in ipairs(steps) do
+                local tr_vis = util.TraceLine({
+                    start = self:GetMuzzleOrigin(),
+                    endpos = v,
+                    filter = self:GetOwner(),
+                    mask = MASK_VISIBLE,
+                })
+                if tr_vis.Fraction < 0.99 then
+                    ccip_visible = i / #steps
+                else
+                    break
+                end
+            end
+
+            local fov = LocalPlayer():GetFOV()
+            local true_hitpos = TacRP.FormatViewModelAttachment(fov, ccip.HitPos, false)
+
+            cam.Start3D()
+                local hit = true_hitpos:ToScreen()
             cam.End3D()
-            -- last_laze_dist = ccip.HitPos:Distance(self:GetMuzzleOrigin())
+            ccip_v = hit.y - y
         end
     end
 
-    for i = 1, math.Round((ccip_v - 4) / 4) do
-        surface.DrawCircle(x, y + i * 4, 1, 255, 255, 255, dropalpha2 * 75)
+    local dots = math.Round((ccip_v - 4) / 4)
+    for i = 1, dots do
+        if ccip_visible < 1 and i / dots > 1 - ccip_visible then
+            surface.DrawCircle(x, y + i * 4, 1, 150, 150, 150, dropalpha2 * 50)
+        else
+            surface.DrawCircle(x, y + i * 4, 1, 255, 255, 255, dropalpha2 * 75)
+        end
     end
-
-    -- surface.DrawCircle(x, y + ccip_v, 6, 255, 255, 255, dropalpha * 120)
-    -- surface.DrawCircle(x, y + ccip_v, 8, 255, 255, 255, dropalpha * 120)
-    surface.SetDrawColor(255, 255, 255, dropalpha2 * 150)
-    surface.DrawLine(x - 7, y - 7 + ccip_v, x + 7, y + 7 + ccip_v)
-    surface.DrawLine(x - 7, y + 7 + ccip_v, x + 7, y - 7 + ccip_v)
-
-    -- surface.DrawCircle(x, y, spread - 1, 255, 255, 255, circlealpha * 75)
-    -- surface.DrawCircle(x, y, spread + 1, 255, 255, 255, circlealpha * 75)
+    if ccip_visible == 1 then
+        surface.SetDrawColor(255, 255, 255, dropalpha2 * 150)
+        surface.DrawLine(x - 7, y - 7 + ccip_v, x + 7, y + 7 + ccip_v)
+        surface.DrawLine(x - 7, y + 7 + ccip_v, x + 7, y - 7 + ccip_v)
+    else
+        surface.DrawCircle(x, y + ccip_v, 16, 150, 150, 150, dropalpha2 * 75)
+        surface.DrawCircle(x, y + ccip_v, 16 + 2, 150, 150, 150, dropalpha2 * 75)
+    end
 end
+SWEP.TacticalCrosshairTruePos = true
