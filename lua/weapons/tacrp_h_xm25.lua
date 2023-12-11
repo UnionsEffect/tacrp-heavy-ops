@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP (Special)"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "9Equipment"
 
-SWEP.Description = "Bullpup grenade launcher with an inbuilt scope. Low muzzle velocity but fires relatively quick. Grenades have a short safety fuse."
+SWEP.Description = "Bullpup grenade launcher with an integrated rangefinder scope, good for medium range suppression. High rate of fire but grenades are fairly slow and weak."
 
 SWEP.Trivia_Caliber = "25x40mm"
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
