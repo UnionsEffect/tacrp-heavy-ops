@@ -176,7 +176,7 @@ SWEP.GestureShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.GestureReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
 
 SWEP.PassiveAng = Angle(0, 0, 0)
-SWEP.PassivePos = Vector(0, -2, -5)
+SWEP.PassivePos = Vector(-0.85, -2.5, -5)
 
 SWEP.BlindFireAng = Angle(0, -5, 5)
 SWEP.BlindFirePos = Vector(4, -2, -4)
