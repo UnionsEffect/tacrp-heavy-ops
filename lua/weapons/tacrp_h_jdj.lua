@@ -68,12 +68,12 @@ SWEP.Melee = false
 // "ballistics"
 
 SWEP.Damage_Max = 300 // damage at minimum range
-SWEP.Damage_Min = 175 // damage at maximum range
+SWEP.Damage_Min = 150 // damage at maximum range
 SWEP.Range_Min = 1500 // distance for which to maintain maximum damage
-SWEP.Range_Max = 6000 // distance at which we drop to minimum damage
-SWEP.Penetration = 40 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 1.5
-SWEP.ArmorBonus = 5
+SWEP.Range_Max = 4000 // distance at which we drop to minimum damage
+SWEP.Penetration = 100 // units of metal this weapon can penetrate
+SWEP.ArmorPenetration = 10
+SWEP.ArmorBonus = 15
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 5, // nobody is surviving this
@@ -86,7 +86,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 0.5
 }
 
-SWEP.MuzzleVelocity = 20000
+SWEP.MuzzleVelocity = 16000
 
 SWEP.ShootTimeMult = 1.5
 
