@@ -128,7 +128,7 @@ SWEP.RPM = 62
 SWEP.Spread = 0.03
 SWEP.ShotgunPelletSpread = 0.005
 
-SWEP.ShootTimeMult = 0.95
+SWEP.ShootTimeMult = 0.85
 
 SWEP.HipFireSpreadPenalty = 0.015
 SWEP.MidAirSpreadPenalty = 0
@@ -142,7 +142,7 @@ SWEP.RecoilDissipationRate = 1.15
 SWEP.RecoilFirstShotMult = 1.2
 
 SWEP.RecoilVisualKick = 2
-SWEP.RecoilKick = 10
+SWEP.RecoilKick = 15
 SWEP.RecoilStability = 0.7
 
 SWEP.RecoilSpreadPenalty = 0.015
@@ -274,13 +274,13 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Bolt",
-        Category = {"bolt_automatic", "bolt_spas"},
+        Category = {"bolt_manual"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
     [4] = {
         PrintName = "Trigger",
-        Category = {"trigger_manual", "trigger_spas"},
+        Category = {"trigger_manual", "trigger_pump"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
