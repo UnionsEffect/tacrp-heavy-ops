@@ -12,7 +12,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "2Magnum Pistol"
 
-SWEP.Description = "Massive revolver shooting small-bore shotgun shells. Swift handling and fires a lot of pellets, but spread is poor."
+SWEP.Description = "Massive revolver shooting small-bore shotgun shells. \nFires a lot of pellets, but spread is poor."
 SWEP.Description_Quote = "Come my friends. 'Tis not too late to seek a newer world."
 
 SWEP.Trivia_Caliber = ".410 Bore"
@@ -136,14 +136,14 @@ SWEP.FiremodeName = "Double-Action" // only used externally for firemode name di
 
 SWEP.RPM = 85
 
-SWEP.Spread = 0.02
+SWEP.Spread = 0.025
 
 SWEP.ShotgunPelletSpread = 0.008
 
 SWEP.ShootTimeMult = 1
 
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 2
+SWEP.RecoilMaximum = 4
 SWEP.RecoilResetTime = 0.4
 SWEP.RecoilDissipationRate = 1.75
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
