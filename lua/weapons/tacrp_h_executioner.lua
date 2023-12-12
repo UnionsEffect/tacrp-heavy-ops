@@ -22,7 +22,6 @@ SWEP.Trivia_Year = "2010"
 SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = [[
 Assets: Call of Duty: Black Ops II (originally ported by Palindrone)
-Firing sound: speedonerd
 Animation: Tactical Intervention
 ]]
 
