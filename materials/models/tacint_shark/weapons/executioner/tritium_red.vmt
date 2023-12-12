@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\tacint_shark\weapons\executioner\tritium_red_glow"
+	"$bumpmap" "models\tacint_shark\weapons\executioner\tritium_n"
+
+	"$selfillummask" "models\tacint_shark\weapons\executioner\tritium_red_glow"
+	"$selfillum" "1"
+	"$translucent" "1"
+}
