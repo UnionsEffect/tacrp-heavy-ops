@@ -1,3 +1,4 @@
+--SPAS Semi Mode
 ATT = {}
 
 ATT.PrintName = "Semi"
@@ -26,6 +27,7 @@ ATT.AnimationTranslationTable = {
 TacRP.LoadAtt(ATT, "trigger_spas_semi")
 
 
+--SPAS HL2 Altfire
 ATT = {}
 
 ATT.PrintName = "2 Shot"
