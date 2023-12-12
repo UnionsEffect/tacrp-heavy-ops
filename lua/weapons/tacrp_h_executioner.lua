@@ -12,16 +12,18 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "2Magnum Pistol"
 
-SWEP.Description = "Massive revolver shooting small-bore shotgun shells. Swift handling compared to a proper shotgun but good luck hitting anything beyond a few meters."
+SWEP.Description = "Massive revolver shooting small-bore shotgun shells. Swift handling and fires a lot of pellets, but spread is poor."
 SWEP.Description_Quote = "Come my friends. 'Tis not too late to seek a newer world."
 
-SWEP.Trivia_Caliber = "28 Gauge"
+SWEP.Trivia_Caliber = ".410 Bore"
 SWEP.Trivia_Manufacturer = "Taurus"
 SWEP.Trivia_Year = "2010"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = [[
-Assets: Call of Duty: Black Ops II (originally ported by Palindrone)
+Main model: Firearms: Source, edited by speedonerd
+Shells & speedloader: Call of Duty: Black Ops II
+Sounds: Call of Duty: Black Ops II
 Animation: Tactical Intervention
 ]]
 
@@ -104,14 +106,14 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 
 // "ballistics"
 
-SWEP.Damage_Max = 20 // damage at minimum range
-SWEP.Damage_Min = 8 // damage at maximum range
+SWEP.Damage_Max = 12 // damage at minimum range
+SWEP.Damage_Min = 4 // damage at maximum range
 SWEP.Range_Min = 300 // distance for which to maintain maximum damage
 SWEP.Range_Max = 1250 // distance at which we drop to minimum damage
 SWEP.Penetration = 3 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.9
 SWEP.ArmorBonus = 5
-SWEP.Num = 5
+SWEP.Num = 10
 
 SWEP.MuzzleVelocity = 12500
 
@@ -134,9 +136,9 @@ SWEP.FiremodeName = "Double-Action" // only used externally for firemode name di
 
 SWEP.RPM = 85
 
-SWEP.Spread = 0.015
+SWEP.Spread = 0.02
 
-SWEP.ShotgunPelletSpread = 0.006
+SWEP.ShotgunPelletSpread = 0.008
 
 SWEP.ShootTimeMult = 1
 
@@ -188,8 +190,8 @@ SWEP.BlindFireSuicidePos = Vector(30, 24, -6)
 SWEP.SprintAng = Angle(0, 30, 0)
 SWEP.SprintPos = Vector(2, 0, -12)
 
-SWEP.SightAng = Angle(0.02, -0.6, 0.5)
-SWEP.SightPos = Vector(-3.5, 0, -4)
+SWEP.SightAng = Angle(0.03, 0.05, 0.5)
+SWEP.SightPos = Vector(-3.4, -0.1, -4.2)
 
 SWEP.CorrectiveAng = Angle(-0.2, 0, 0.5)
 SWEP.CorrectivePos = Vector(-0.125, 0, 0.13)
@@ -279,6 +281,17 @@ SWEP.ProceduralIronFire = {
 
 // attachments
 
+SWEP.AttachmentElements = {
+    ["rail"] = {
+        BGs_VM = {
+            {1, 1}
+        },
+        BGs_WM = {
+            {1, 1}
+        }
+    },
+}
+
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
@@ -289,9 +302,10 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/optic_off.wav",
         VMScale = 1,
         WMScale = 1,
-        Pos_VM = Vector(-4.9, -0.1, 6),
+		InstalledElements = {"rail"},
+        Pos_VM = Vector(-5.4, -0.2, 8),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(0.15, 4, 0.2),
+        Pos_WM = Vector(0.15, 7, 0.75),
         Ang_WM = Angle(0, -90, 0),
     },
     [2] = {
@@ -303,7 +317,7 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/flashlight_off.wav",
         VMScale = 1,
         WMScale = 1,
-        Pos_VM = Vector(-2.9, -0.1, 10),
+        Pos_VM = Vector(-2.8, -0.1, 11),
         Ang_VM = Angle(90, 0, 180),
         Pos_WM = Vector(0, 7.5, -1.8),
         Ang_WM = Angle(0, -90, 180),
