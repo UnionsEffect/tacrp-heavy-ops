@@ -8,7 +8,7 @@ SWEP.PrintName = "SSK .950 JDJ"
 SWEP.Category = "Tactical RP (Special)"
 
 SWEP.SubCatTier = "9Special"
-SWEP.SubCatType = "9Equipment"
+SWEP.SubCatType = "7Special Weapon"
 
 SWEP.Description = "Unfathomly large \"hunting rifle\" shooting an unfathomably large round nearly an inch in diameter. \nIf this thing can't kill your target...God help you. \nEquipped with a 10x scope by default."
 
