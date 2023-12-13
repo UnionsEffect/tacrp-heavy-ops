@@ -7,10 +7,10 @@ AddCSLuaFile()
 SWEP.PrintName = "Franchi SPAS-12"
 SWEP.Category = "Tactical RP"
 
-SWEP.SubCatTier = "2Operator"
+SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "5Shotgun"
 
-SWEP.Description = "Combat shotgun with imposing, futuristic looks, made famous through action cinema. Heavy frame gives the weapon stable recoil. \nFolding stock blocks the use of optics."
+SWEP.Description = "Imposing combat shotgun with dual mode operation. Stable but slow to fire. Folding stock blocks the use of optics."
 
 SWEP.Trivia_Caliber = "12 Gauge"
 SWEP.Trivia_Manufacturer = "Luigi Franchi S.p.A."
@@ -31,12 +31,10 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 12,
+        Damage_Max = 13,
         Damage_Min = 5,
-		Range_Min = 600,
-		ClipSize = 8,
-		
-		ReloadTimeMult = 1.15,
+
+        ReloadTimeMult = 1.15,
 
         MoveSpeedMult = 0.85,
         ShootingSpeedMult = 0.8,
@@ -79,11 +77,11 @@ SWEP.BalanceStats = {
         Damage_Max = 10,
         Damage_Min = 5,
         ClipSize = 6,
-		Range_Min = 300,
-		Range_Max = 1200,
-		
-		Spread = 0.02,
-		ShotgunPelletSpread = 0.002,
+        Range_Min = 300,
+        Range_Max = 1200,
+
+        Spread = 0.02,
+        ShotgunPelletSpread = 0.002,
 
         MoveSpeedMult = 0.9,
         ShootingSpeedMult = 0.8,
@@ -97,7 +95,7 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
-SWEP.Damage_Max = 12
+SWEP.Damage_Max = 14
 SWEP.Damage_Min = 8
 SWEP.Range_Min = 600 // distance for which to maintain maximum damage
 SWEP.Range_Max = 1500 // distance at which we drop to minimum damage
@@ -106,7 +104,7 @@ SWEP.Num = 8
 SWEP.ArmorPenetration = 0.7
 SWEP.ArmorBonus = 1.5
 
-SWEP.MuzzleVelocity = 9000
+SWEP.MuzzleVelocity = 13000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 1.25,
@@ -233,7 +231,7 @@ SWEP.AnimationTranslationTable = {
     ["melee"] = {"melee1", "melee2"},
     ["reload"] = {"reload", "reload2"},
     ["jam"] = "reload_finish",
-	["deploy"] = "unholster"
+    ["deploy"] = "unholster"
 }
 
 SWEP.DeployTimeMult = 2
@@ -274,13 +272,13 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Bolt",
-        Category = {"bolt_manual"},
+        Category = {"bolt_manual", "bolt_spas"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
     [4] = {
         PrintName = "Trigger",
-        Category = {"trigger_manual", "trigger_pump"},
+        Category = {"trigger_manual"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
