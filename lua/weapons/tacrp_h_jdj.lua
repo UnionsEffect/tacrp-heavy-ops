@@ -281,18 +281,6 @@ SWEP.Attachments = {
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [5] = {
-        PrintName = "Bolt",
-        Category = {"bolt_manual"},
-        AttachSound = "TacRP/weapons/flashlight_on.wav",
-        DetachSound = "TacRP/weapons/flashlight_off.wav",
-    },
-    [6] = {
-        PrintName = "Trigger",
-        Category = {"trigger_manual"},
-        AttachSound = "TacRP/weapons/flashlight_on.wav",
-        DetachSound = "TacRP/weapons/flashlight_off.wav",
-    },
     [7] = {
         PrintName = "Ammo",
         Category = {"ammo_amr"},
