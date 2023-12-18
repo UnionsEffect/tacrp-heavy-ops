@@ -16,7 +16,7 @@ SWEP.Trivia_Caliber = "25x40mm"
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Year = "2010"
 
-SWEP.Faction = TacRP.FACTION_NEUTRAL
+SWEP.Faction = TacRP.FACTION_COALITION
 SWEP.Credits = [[
 Assets: Call of Duty: Modern Warfare 3 (2011)
 Animation: Tactical Intervention, edited by speedonerd
