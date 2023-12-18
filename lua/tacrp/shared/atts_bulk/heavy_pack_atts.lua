@@ -63,3 +63,20 @@ ATT.Mult_RecoilKick = 1.25
 ATT.Mult_RecoilStability = 0.8
 
 TacRP.LoadAtt(ATT, "trigger_spas_freeman")
+
+
+--intervention mlg sound
+ATT = {}
+
+ATT.PrintName = "mlg"
+ATT.FullName = "mlg quickscoper sound"
+
+ATT.Icon = Material("entities/tacrp_att_ammo_1858_45colt.png", "mips smooth")
+ATT.Description = "this one's going in the montage."
+ATT.Pros = {"fucking awesome"}
+
+ATT.Category = "m200_mlg"
+
+ATT.Override_Sound_Shoot = "^tacint_shark/intervention/fire_mlg.wav"
+
+TacRP.LoadAtt(ATT, "sound_m200_mlg")

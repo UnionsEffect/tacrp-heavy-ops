@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	"$basetexture" "models\tacint_shark\weapons\intervention\lens_d"
+	"$bumpmap" "models\tacint_shark\weapons\intervention\lens_n"
+	"$translucent" "1"
+
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[0.6 0.8 0.8]"
+	"$envmap" "env_cubemap"
+}
