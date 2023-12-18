@@ -35,15 +35,17 @@ SWEP.SlotAlt = 3
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
         Damage_Max = 45,
-        Damage_Min = 100,
+        Damage_Min = 125,
 
         Range_Min = 1600,
         Range_Max = 4875,
 
         Sway = 2,
         ScopedSway = 0.1,
+		
+		RecoilKick = 12,
 
-        MoveSpeedMult = 0.8,
+        MoveSpeedMult = 0.78,
         ShootingSpeedMult = 0.55,
         SightedSpeedMult = 0.65,
         MeleeSpeedMult = 1,
@@ -107,8 +109,8 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.SniperRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 110
-SWEP.Damage_Min = 75
+SWEP.Damage_Max = 125
+SWEP.Damage_Min = 70
 SWEP.Range_Min = 2000
 SWEP.Range_Max = 5100
 SWEP.Penetration = 35 // units of metal this weapon can penetrate
@@ -136,7 +138,7 @@ SWEP.FiremodeName = "Bolt-Action" // only used externally for firemode name dist
 
 SWEP.RPM = 27
 
-SWEP.Spread = 0.00
+SWEP.Spread = 0
 
 SWEP.HipFireSpreadPenalty = 0.05
 SWEP.PeekPenaltyFraction = 0.3
@@ -147,9 +149,9 @@ SWEP.RecoilResetTime = 0.35
 SWEP.RecoilDissipationRate = 1
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 5
+SWEP.RecoilVisualKick = 6
 
-SWEP.RecoilKick = 8
+SWEP.RecoilKick = 15
 
 SWEP.RecoilSpreadPenalty = 0 // extra spread per one unit of recoil
 
@@ -159,7 +161,7 @@ SWEP.ShootTimeMult = 1.3
 
 // handling
 
-SWEP.MoveSpeedMult = 0.75
+SWEP.MoveSpeedMult = 0.72
 SWEP.ShootingSpeedMult = 0.65
 SWEP.SightedSpeedMult = 0.45
 
@@ -224,7 +226,7 @@ SWEP.ScopeOverlaySize = 0.8
 SWEP.ClipSize = 7
 SWEP.Ammo = "357"
 
-SWEP.ReloadTimeMult = 1.2
+SWEP.ReloadTimeMult = 1.3
 SWEP.DropMagazineImpact = "metal"
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/intervention.mdl"
 
@@ -386,5 +388,5 @@ end
 
 addsound("tacint_intervention.Clip_Out", path1 .. "_clipout.wav")
 addsound("tacint_intervention.Clip_In", path1 .. "_clipin.wav")
-addsound("tacint_intervention.Bolt_Back", path1 .. "_bolt.wav")
-addsound("tacint_intervention.bolt_forward", path1 .. "_bolt.wav")
+addsound("tacint_intervention.Bolt_Back", path1 .. "_bolt_back.wav")
+addsound("tacint_intervention.bolt_forward", path1 .. "_bolt_forward.wav")
