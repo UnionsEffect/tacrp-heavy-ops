@@ -13,7 +13,7 @@ SWEP.SubCatType = "7Sniper Rifle"
 SWEP.Description = "Futuristic-looking sniper-AMR hybrid with excellent armor penetration and high muzzle velocity. \nEquipped with a 12x scope by default."
 SWEP.Description_Quote = "1v1 me on rust m8 i bet u cant even quickscope u fkn noob"
 
-SWEP.Trivia_Caliber = ".408 CheyTac"
+SWEP.Trivia_Caliber = ".408 Cheyenne Tactical"
 SWEP.Trivia_Manufacturer = "CheyTac USA"
 SWEP.Trivia_Year = "2001"
 
@@ -226,7 +226,7 @@ SWEP.Ammo = "357"
 
 SWEP.ReloadTimeMult = 1.2
 SWEP.DropMagazineImpact = "metal"
-SWEP.DropMagazineModel = "models/weapons/tacint_extras/magazines/trg42.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/intervention.mdl"
 
 SWEP.ReloadUpInTime = 1.75
 SWEP.DropMagazineTime = 0.8
