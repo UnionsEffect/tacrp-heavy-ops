@@ -237,7 +237,7 @@ local path = "TacRP/weapons/uratio/uratio_"
 local path1 = "tacint_shark/intervention/awp"
 
 SWEP.Sound_Shoot = "^" .. path1 .. "1.wav"
-SWEP.Sound_Shoot_Silenced = "TacRP/weapons/ak47/ak47_fire_silenced-1.wav"
+SWEP.Sound_Shoot_Silenced = path1 .. "_silenced.wav"
 
 SWEP.Vol_Shoot = 130
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
