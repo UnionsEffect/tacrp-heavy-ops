@@ -152,7 +152,7 @@ SWEP.CanMeleeAttack = false
 SWEP.ClipSize = 1
 SWEP.Ammo = "rpg_round"
 
-SWEP.ReloadTimeMult = 2.1
+SWEP.ReloadTimeMult = 1.75
 SWEP.DropMagazineImpact = "metal"
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/smaw.mdl"
 
@@ -194,7 +194,7 @@ SWEP.AnimationTranslationTable = {
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
-        Category = {"optic_medium", "optic_sniper"},
+        Category = {"optic_cqb", "optic_medium", "optic_sniper"},
         WMBone = "ValveBiped.Bip01_R_Hand",
         Bone = "ValveBiped.RPG7_rootbone",
         AttachSound = "TacRP/weapons/optic_on.wav",
