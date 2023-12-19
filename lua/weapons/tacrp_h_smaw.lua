@@ -39,7 +39,7 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 0.75,
     },
     [TacRP.BALANCE_TTT] = {
-        ReloadTimeMult = 2.25,
+        ReloadTimeMult = 1.75,
 
         MoveSpeedMult = 0.7,
         ShootingSpeedMult = 0.5,
@@ -152,7 +152,7 @@ SWEP.CanMeleeAttack = false
 SWEP.ClipSize = 1
 SWEP.Ammo = "rpg_round"
 
-SWEP.ReloadTimeMult = 1.75
+SWEP.ReloadTimeMult = 1.6
 SWEP.DropMagazineImpact = "metal"
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/smaw.mdl"
 
