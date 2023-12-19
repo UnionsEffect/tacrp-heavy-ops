@@ -156,7 +156,7 @@ SWEP.ReloadTimeMult = 1.75
 SWEP.DropMagazineImpact = "metal"
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/smaw.mdl"
 
-SWEP.DropMagazineTime = 0.7
+SWEP.DropMagazineTime = 0.45
 
 --SWEP.BulletBodygroups = {
   --  [1] = {5, 1}
