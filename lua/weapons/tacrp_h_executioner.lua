@@ -12,7 +12,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "2Magnum Pistol"
 
-SWEP.Description = "Massive revolver shooting small-bore shotgun shells. \nFires a lot of pellets, but spread is poor."
+SWEP.Description = "Massive revolver shooting small-bore shotgun shells.\nFires a lot of pellets, but spread is poor."
 SWEP.Description_Quote = "Come my friends. 'Tis not too late to seek a newer world."
 
 SWEP.Trivia_Caliber = ".410 Bore"
@@ -34,23 +34,23 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Range_Min = 325,
-        Range_Max = 1400,
+        Range_Min = 100,
+        Range_Max = 1200,
         RPM = 80,
-		RecoilVisualKick = 3,
+        RecoilVisualKick = 3,
 
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 1.5,
+            [HITGROUP_HEAD] = 1,
             [HITGROUP_CHEST] = 1,
             [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.9,
-            [HITGROUP_RIGHTARM] = 0.9,
+            [HITGROUP_LEFTARM] = 1,
+            [HITGROUP_RIGHTARM] = 1,
             [HITGROUP_LEFTLEG] = 0.75,
             [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.75
         },
 
-        HipFireSpreadPenalty = 0.06,
+        HipFireSpreadPenalty = 0.035,
 
         MoveSpeedMult = 1,
         ShootingSpeedMult = 0.75,
@@ -59,12 +59,13 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 1,
     },
     [TacRP.BALANCE_TTT] = {
+        Damage_Max = 8,
         Range_Min = 285,
         Range_Max = 1300,
         RPM = 80,
 
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 1.15,
+            [HITGROUP_HEAD] = 1,
             [HITGROUP_CHEST] = 1,
             [HITGROUP_STOMACH] = 1,
             [HITGROUP_LEFTARM] = 1,
@@ -77,7 +78,7 @@ SWEP.BalanceStats = {
         RecoilMaximum = 1.5,
         RecoilResetTime = 0.25,
         RecoilDissipationRate = 1.2,
-        HipFireSpreadPenalty = 0.06,
+        HipFireSpreadPenalty = 0.035,
 
         ReloadTimeMult = 1.3,
 
@@ -92,7 +93,7 @@ SWEP.BalanceStats = {
         Range_Max = 5000,
         RPM = 90,
 
-        HipFireSpreadPenalty = 0.045,
+        HipFireSpreadPenalty = 0.035,
 
         MoveSpeedMult = 1,
         ShootingSpeedMult = 0.7,
@@ -106,23 +107,23 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Magnum
 
 // "ballistics"
 
-SWEP.Damage_Max = 12 // damage at minimum range
+SWEP.Damage_Max = 11 // damage at minimum range
 SWEP.Damage_Min = 4 // damage at maximum range
 SWEP.Range_Min = 300 // distance for which to maintain maximum damage
-SWEP.Range_Max = 1250 // distance at which we drop to minimum damage
+SWEP.Range_Max = 1500 // distance at which we drop to minimum damage
 SWEP.Penetration = 3 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.9
-SWEP.ArmorBonus = 5
-SWEP.Num = 10
+SWEP.ArmorPenetration = 0.5
+SWEP.ArmorBonus = 0.5
+SWEP.Num = 12
 
-SWEP.MuzzleVelocity = 12500
+SWEP.MuzzleVelocity = 7000
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 1.25,
+    [HITGROUP_HEAD] = 1,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_LEFTARM] = 1,
+    [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.75,
     [HITGROUP_RIGHTLEG] = 0.75,
     [HITGROUP_GEAR] = 0.75
@@ -136,9 +137,9 @@ SWEP.FiremodeName = "Double-Action" // only used externally for firemode name di
 
 SWEP.RPM = 85
 
-SWEP.Spread = 0.025
+SWEP.Spread = 0.04
 
-SWEP.ShotgunPelletSpread = 0.008
+SWEP.ShotgunPelletSpread = 0.02
 
 SWEP.ShootTimeMult = 1
 
@@ -154,7 +155,7 @@ SWEP.RecoilStability = 0.45
 SWEP.RecoilAltMultiplier = 150
 
 SWEP.RecoilSpreadPenalty = 0.05 // extra spread per one unit of recoil
-SWEP.HipFireSpreadPenalty = 0.035
+SWEP.HipFireSpreadPenalty = 0.02
 
 SWEP.CanBlindFire = true
 
@@ -302,7 +303,7 @@ SWEP.Attachments = {
         DetachSound = "TacRP/weapons/optic_off.wav",
         VMScale = 1,
         WMScale = 1,
-		InstalledElements = {"rail"},
+        InstalledElements = {"rail"},
         Pos_VM = Vector(-5.4, -0.2, 8),
         Ang_VM = Angle(90, 0, 0),
         Pos_WM = Vector(0.15, 7, 0.75),
