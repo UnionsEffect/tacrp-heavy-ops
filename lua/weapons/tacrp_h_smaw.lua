@@ -19,7 +19,7 @@ SWEP.Trivia_Year = "1984"
 SWEP.Faction = TacRP.FACTION_COALITION
 SWEP.Credits = [[
 Assets: Call of Duty: Modern Warfare 3 (2011)
-Animation: Tactical Intervention
+Animation: Tactical Intervention & speedonerd
 ]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_smaw.mdl"
