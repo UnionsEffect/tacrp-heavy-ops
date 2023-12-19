@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP (Special)"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "6Launcher"
 
-SWEP.Description = "Man-portable bunker buster with massive explosive power. Large rockets have a large blast radius but travel slowly. \nCan mount optics."
+SWEP.Description = "Man-portable bunker buster with massive explosive power. Larger warhead travels slowly, but has increased damage and blast radius. Can mount optics."
 
 SWEP.Trivia_Caliber = "83mm Rockets"
 SWEP.Trivia_Manufacturer = "Nammo Talley"
@@ -56,7 +56,7 @@ SWEP.Damage_Min = 250
 SWEP.Range_Max = 7000
 SWEP.Range_Min = 4000
 
-SWEP.ShootEnt = "tacrp_proj_rpg7"
+SWEP.ShootEnt = "tacrp_proj_smaw"
 SWEP.ShootEntForce = 4000
 
 SWEP.Num = 1
