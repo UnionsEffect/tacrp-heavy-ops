@@ -32,10 +32,8 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 12,
-        Damage_Min = 7,
-		
-		ClipSize = 8,
+        Damage_Max = 10,
+        Damage_Min = 4,
 
         MoveSpeedMult = 0.8,
         ShootingSpeedMult = 0.5,
@@ -48,9 +46,8 @@ SWEP.BalanceStats = {
         Damage_Min = 6,
         Range_Min = 300,
         Range_Max = 900,
-		
-		ClipSize = 8,
-		RPM = 200,
+
+        RPM = 200,
 
         ReloadTimeMult = 1.7,
 
@@ -63,8 +60,8 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_PVE] = {
         Damage_Max = 10,
         Damage_Min = 7,
-		Range_Min = 400,
-		Range_Max = 1200,
+        Range_Min = 400,
+        Range_Max = 1200,
 
         MoveSpeedMult = 0.85,
         ShootingSpeedMult = 0.8,
@@ -78,13 +75,13 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.AssaultRifle
 
 // "ballistics"
 
-SWEP.Damage_Max = 13
-SWEP.Damage_Min = 6
+SWEP.Damage_Max = 12
+SWEP.Damage_Min = 5
 SWEP.Range_Min = 300
 SWEP.Range_Max = 1000
 SWEP.Penetration = 1
 SWEP.ArmorPenetration = 0.4
-SWEP.Num = 6
+SWEP.Num = 9
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 2,
@@ -105,7 +102,8 @@ SWEP.Firemode = 2
 
 SWEP.RPM = 240
 
-SWEP.Spread = 0.04
+SWEP.Spread = 0.05
+SWEP.ShotgunPelletSpread = 0.035
 
 SWEP.JamFactor = 0.05
 
@@ -217,7 +215,7 @@ SWEP.AnimationTranslationTable = {
     ["fire4"] = "fire3_M",
     ["fire5"] = "fire3_M",
     ["melee"] = {"melee1", "melee2"},
-	["deploy"] = "unholster"
+    ["deploy"] = "unholster"
 }
 
 SWEP.DeployTimeMult = 2.2
@@ -244,7 +242,7 @@ SWEP.Attachments = {
         AttachSound = "tacrp/weapons/optic_on.wav",
         DetachSound = "tacrp/weapons/optic_off.wav",
         VMScale = 1,
-		InstalledElements = {"rail"},
+        InstalledElements = {"rail"},
         Pos_VM = Vector(-8.3, -0.1, 4.25),
         Ang_VM = Angle(90, 0, -0.8),
         Pos_WM = Vector(6, 1.65, -8.75),
@@ -257,8 +255,8 @@ SWEP.Attachments = {
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
         InstalledElements = {"tactical"},
-		VMScale = 1.1,
-		WMScale = 1.1,
+        VMScale = 1.1,
+        WMScale = 1.1,
         Pos_VM = Vector(-4, -0.8, 13),
         Ang_VM = Angle(90, 0, -90),
         Pos_WM = Vector(12, 2.5, -4.5),
