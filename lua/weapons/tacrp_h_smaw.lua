@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP (Special)"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "6Launcher"
 
-SWEP.Description = "Man-portable bunker buster with massive explosive power. Larger warhead travels slowly, but has increased damage and blast radius. Can mount optics."
+SWEP.Description = "Man-portable bunker buster. Laser guided rockets travel slowly, but has a larger explosion. Can mount optics."
 
 SWEP.Trivia_Caliber = "83mm Rockets"
 SWEP.Trivia_Manufacturer = "Nammo Talley"
@@ -57,7 +57,7 @@ SWEP.Range_Max = 7000
 SWEP.Range_Min = 4000
 
 SWEP.ShootEnt = "tacrp_proj_smaw"
-SWEP.ShootEntForce = 4000
+SWEP.ShootEntForce = 2000
 
 SWEP.Num = 1
 
@@ -67,7 +67,7 @@ SWEP.Firemode = 1
 
 SWEP.FiremodeName = "Single-Shot" // only used externally for firemode name distinction
 
-SWEP.RPM = 45
+SWEP.RPM = 100
 
 SWEP.Spread = 0.01
 
@@ -77,7 +77,7 @@ SWEP.RecoilResetTime = 0.2// time after you stop shooting for recoil to start di
 SWEP.RecoilDissipationRate = 1
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 10
+SWEP.RecoilVisualKick = 5
 SWEP.RecoilVisualShake = 0.5
 
 SWEP.RecoilKick = 0
@@ -85,6 +85,13 @@ SWEP.RecoilKick = 0
 SWEP.RecoilSpreadPenalty = 0 // extra spread per one unit of recoil
 
 SWEP.CanBlindFire = true
+
+SWEP.Laser = true
+SWEP.LaserPower = 4
+SWEP.LaserQCAttachment = 1
+SWEP.LaserAlwaysAccurate = true
+SWEP.CanToggle = true
+SWEP.TacticalName = "Laser"
 
 // handling
 
@@ -138,8 +145,8 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 
 // sway
 
-SWEP.Sway = 3
-SWEP.ScopedSway = 0.25
+SWEP.Sway = 2
+SWEP.ScopedSway = 0.2
 
 SWEP.FreeAimMaxAngle = 10
 
@@ -208,7 +215,7 @@ SWEP.Attachments = {
     },
     [2] = {
         PrintName = "Ammo",
-        Category = {"ammo_rpg"},
+        Category = {"ammo_smaw"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },

@@ -24,6 +24,45 @@ ENT.SmokeTrail = true
 
 ENT.FlareColor = Color(200, 255, 255)
 
+ENT.SteerSpeed = 30
+
+function ENT:OnThink()
+    if CLIENT then return end
+    local wep = self.Inflictor
+    if IsValid(wep) and wep:GetTactical() and !wep:GetReloading() and IsValid(wep:GetOwner()) and wep:GetOwner():IsPlayer() and wep:GetOwner():Alive() then
+        local pos_tr = wep:GetMuzzleOrigin()
+        local ang = wep:GetShootDir()
+
+        local tr = util.TraceLine({
+            start = pos_tr,
+            endpos = pos_tr + (ang:Forward() * 30000),
+            mask = MASK_VISIBLE,
+            filter = self:GetOwner()
+        })
+        if tr.Hit then
+            self.TargetAng = (tr.HitPos - self:GetPos()):Angle()
+        end
+    end
+end
+
+function ENT:PhysicsUpdate(phys)
+    local v = phys:GetVelocity()
+    if self.TargetAng then
+
+        local p = self:GetAngles().p
+        local y = self:GetAngles().y
+
+        local diff = math.min(math.abs(math.AngleDifference(p, self.TargetAng.p)) + math.abs(math.AngleDifference(y, self.TargetAng.y)), self.SteerSpeed * 2)
+        p = math.ApproachAngle(p, self.TargetAng.p, FrameTime() * self.SteerSpeed)
+        y = math.ApproachAngle(y, self.TargetAng.y, FrameTime() * self.SteerSpeed)
+
+        self:SetAngles(Angle(p, y, 0))
+        phys:SetVelocityInstantaneous(self:GetForward() * math.min(v:Length() - diff * FrameTime() * 10 + 1500 * FrameTime(), 4000))
+    else
+        phys:SetVelocityInstantaneous(self:GetForward() * math.min(v:Length() + 1500 * FrameTime(), 4000))
+    end
+end
+
 function ENT:Impact(data, collider)
     if self.SpawnTime + self.SafetyFuse > CurTime() and !self.NPCDamage then
         local attacker = self.Attacker or self:GetOwner()
@@ -68,12 +107,12 @@ function ENT:Detonate()
     local attacker = self.Attacker or self:GetOwner()
 
     if self.NPCDamage then
-        util.BlastDamage(self, attacker, self:GetPos(), 400, 100)
+        util.BlastDamage(self, attacker, self:GetPos(), 400, 120)
     else
-        util.BlastDamage(self, attacker, self:GetPos(), 400, 250)
+        util.BlastDamage(self, attacker, self:GetPos(), 400, 300)
         self:FireBullets({
             Attacker = attacker,
-            Damage = 1200,
+            Damage = 600,
             Tracer = 0,
             Src = self:GetPos(),
             Dir = self:GetForward(),
@@ -82,7 +121,7 @@ function ENT:Detonate()
             IgnoreEntity = self,
             Callback = function(atk, btr, dmginfo)
                 dmginfo:SetDamageType(DMG_AIRBOAT + DMG_BLAST) // airboat damage for helicopters and LVS vehicles
-                dmginfo:SetDamageForce(self:GetForward() * 20000) // LVS uses this to calculate penetration!
+                dmginfo:SetDamageForce(self:GetForward() * 15000) // LVS uses this to calculate penetration!
             end,
         })
     end
@@ -96,7 +135,7 @@ function ENT:Detonate()
         util.Effect("Explosion", fx)
     end
 
-    self:EmitSound("TacRP/weapons/rpg7/explode.wav", 125)
+    self:EmitSound("TacRP/weapons/rpg7/explode.wav", 125, 90)
 
     self:Remove()
 end
