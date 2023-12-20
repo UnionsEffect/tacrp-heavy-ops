@@ -1,3 +1,5 @@
+local ATT
+
 --SPAS Semi Mode
 ATT = {}
 
@@ -80,3 +82,32 @@ ATT.Category = "m200_mlg"
 ATT.Override_Sound_Shoot = "^tacint_shark/intervention/fire_mlg.wav"
 
 TacRP.LoadAtt(ATT, "sound_m200_mlg")
+
+-- SMAW Tri
+ATT = {}
+
+ATT.PrintName = "Tri-Attack"
+ATT.FullName = "SMAW Tri-Attack Rocket Pod"
+ATT.Icon = Material("entities/tacrp_att_bolt_light.png", "mips smooth")
+ATT.Description = "A trio of fast and maneuverable anti-infantry missiles."
+ATT.Pros = {"att.procon.3proj", "att.procon.rocket.speed", "att.procon.rocket.steer"}
+ATT.Cons = {"stat.spread", "att.procon.armdelay", "att.procon.rocket.payload"}
+
+ATT.Category = "ammo_smaw"
+
+ATT.SortOrder = 1
+
+ATT.Override_Damage_Max = 90
+ATT.Override_Damage_Min = 90
+
+ATT.Override_Num = 3
+ATT.Override_ShootEnt = "tacrp_proj_smaw_tri"
+
+ATT.Mult_ShootEntForce = 1.25
+
+ATT.Override_Spread = 0.25
+
+ATT.Override_MidAirSpreadPenalty = 0
+ATT.Override_HipFireSpreadPenalty = 0
+
+TacRP.LoadAtt(ATT, "ammo_smaw_tri")

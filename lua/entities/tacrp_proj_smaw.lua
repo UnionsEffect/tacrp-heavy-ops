@@ -25,9 +25,15 @@ ENT.SmokeTrail = true
 ENT.FlareColor = Color(200, 255, 255)
 
 ENT.SteerSpeed = 30
+ENT.SteerDelay = 0
+
+ENT.MaxSpeed = 4000
+ENT.Acceleration = 1500
+ENT.SteerBrake = 5
+ENT.AlwaysSteer = false
 
 function ENT:OnThink()
-    if CLIENT then return end
+    if CLIENT or (self.SteerDelay + self.SpawnTime) > CurTime() then return end
     local wep = self.Inflictor
     if IsValid(wep) and wep:GetTactical() and !wep:GetReloading() and IsValid(wep:GetOwner()) and wep:GetOwner():IsPlayer() and wep:GetOwner():Alive() then
         local pos_tr = wep:GetMuzzleOrigin()
@@ -40,28 +46,28 @@ function ENT:OnThink()
             filter = self:GetOwner()
         })
         if tr.Hit then
-            self.TargetAng = (tr.HitPos - self:GetPos()):Angle()
+            self.TargetPos = tr.HitPos
         end
-    else
-        self.TargetAng = nil
+    elseif !self.AlwaysSteer then
+        self.TargetPos = nil
     end
 end
 
 function ENT:PhysicsUpdate(phys)
     local v = phys:GetVelocity()
-    if self.TargetAng then
-
+    if self.TargetPos and (self.SteerDelay + self.SpawnTime) <= CurTime() then
+        local tgtang = (self.TargetPos - self:GetPos()):Angle()
         local p = self:GetAngles().p
         local y = self:GetAngles().y
 
-        local diff = math.min(math.abs(math.AngleDifference(p, self.TargetAng.p)) + math.abs(math.AngleDifference(y, self.TargetAng.y)), self.SteerSpeed * 2)
-        p = math.ApproachAngle(p, self.TargetAng.p, FrameTime() * self.SteerSpeed)
-        y = math.ApproachAngle(y, self.TargetAng.y, FrameTime() * self.SteerSpeed)
+        local diff = self.SteerBrake * math.min(math.abs(math.AngleDifference(p, tgtang.p)) + math.abs(math.AngleDifference(y, tgtang.y)), self.SteerSpeed * 2)
+        p = math.ApproachAngle(p, tgtang.p, FrameTime() * self.SteerSpeed)
+        y = math.ApproachAngle(y, tgtang.y, FrameTime() * self.SteerSpeed)
 
         self:SetAngles(Angle(p, y, 0))
-        phys:SetVelocityInstantaneous(self:GetForward() * math.min(v:Length() - diff * FrameTime() * 10 + 1500 * FrameTime(), 4000))
+        phys:SetVelocityInstantaneous(self:GetForward() * math.min(v:Length() + (self.Acceleration - diff) * FrameTime(), self.MaxSpeed))
     else
-        phys:SetVelocityInstantaneous(self:GetForward() * math.min(v:Length() + 1500 * FrameTime(), 4000))
+        phys:SetVelocityInstantaneous(self:GetForward() * math.min(v:Length() + self.Acceleration * FrameTime(), self.MaxSpeed))
     end
 end
 
