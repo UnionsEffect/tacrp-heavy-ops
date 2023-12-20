@@ -103,7 +103,7 @@ ATT.Override_Damage_Min = 90
 ATT.Override_Num = 3
 ATT.Override_ShootEnt = "tacrp_proj_smaw_tri"
 
-ATT.Mult_ShootEntForce = 1.25
+ATT.Mult_ShootEntForce = 2
 
 ATT.Override_Spread = 0.25
 

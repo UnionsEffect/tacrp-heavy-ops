@@ -29,7 +29,8 @@ ENT.SteerDelay = 0
 
 ENT.MaxSpeed = 4000
 ENT.Acceleration = 1500
-ENT.SteerBrake = 5
+ENT.SteerBrake = 2000
+ENT.MinSpeed = 1500
 ENT.AlwaysSteer = false
 
 function ENT:OnThink()
@@ -60,14 +61,14 @@ function ENT:PhysicsUpdate(phys)
         local p = self:GetAngles().p
         local y = self:GetAngles().y
 
-        local diff = self.SteerBrake * math.min(math.abs(math.AngleDifference(p, tgtang.p)) + math.abs(math.AngleDifference(y, tgtang.y)), self.SteerSpeed * 2)
+        local diff = self.SteerBrake * math.min((math.abs(math.AngleDifference(p, tgtang.p)) + math.abs(math.AngleDifference(y, tgtang.y))) / (self.SteerSpeed * 2), 1)
         p = math.ApproachAngle(p, tgtang.p, FrameTime() * self.SteerSpeed)
         y = math.ApproachAngle(y, tgtang.y, FrameTime() * self.SteerSpeed)
 
         self:SetAngles(Angle(p, y, 0))
-        phys:SetVelocityInstantaneous(self:GetForward() * math.min(v:Length() + (self.Acceleration - diff) * FrameTime(), self.MaxSpeed))
+        phys:SetVelocityInstantaneous(self:GetForward() * math.Clamp(v:Length() + (self.Acceleration - diff) * FrameTime(), self.MinSpeed, self.MaxSpeed))
     else
-        phys:SetVelocityInstantaneous(self:GetForward() * math.min(v:Length() + self.Acceleration * FrameTime(), self.MaxSpeed))
+        phys:SetVelocityInstantaneous(self:GetForward() * math.Clamp(v:Length() + self.Acceleration * FrameTime(), self.MinSpeed, self.MaxSpeed))
     end
 end
 

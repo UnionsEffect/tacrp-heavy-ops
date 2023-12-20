@@ -26,12 +26,13 @@ ENT.FlareColor = Color(150, 255, 255)
 ENT.FlareSizeMin = 50
 ENT.FlareSizeMax = 80
 
-ENT.SteerSpeed = 120
+ENT.SteerSpeed = 150
 ENT.SteerDelay = 0.5
 
 ENT.MaxSpeed = 1000
-ENT.Acceleration = 500
-ENT.SteerBrake = 0
+ENT.MinSpeed = 300
+ENT.Acceleration = 1000
+ENT.SteerBrake = 2000
 
 DEFINE_BASECLASS(ENT.Base)
 
