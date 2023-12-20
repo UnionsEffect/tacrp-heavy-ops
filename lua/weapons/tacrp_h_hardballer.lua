@@ -18,10 +18,14 @@ SWEP.Trivia_Manufacturer = "Arcadia Machine & Tool."
 SWEP.Trivia_Year = "1980"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
-SWEP.Credits = "Assets: Tactical Intervention"
+SWEP.Credits = [[
+Assets: Terminator: Resistance (originally ported by Sirgibsalot)
+Sounds: speedonerd
+Animation: Tactical Intervention
+]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_hardballer.mdl"
-SWEP.WorldModel = "models/weapons/tacint/w_gsr1911.mdl"
+SWEP.WorldModel = "models/weapons/tacint_shark/w_hardballer.mdl"
 
 SWEP.Slot = 1
 
@@ -133,13 +137,13 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 400
+SWEP.RPM = 350
 
 SWEP.Spread = 0.005
 SWEP.RecoilSpreadPenalty = 0.006
 SWEP.HipFireSpreadPenalty = 0.01
 
-SWEP.ShootTimeMult = 0.5
+SWEP.ShootTimeMult = 0.6
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
@@ -205,9 +209,9 @@ SWEP.FreeAimMaxAngle = 3.5
 SWEP.ClipSize = 7
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1.05
+SWEP.ReloadTimeMult = 1.15
 
-SWEP.DropMagazineModel = "models/weapons/tacint/magazines/gsr1911.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/hardballer.mdl"
 SWEP.DropMagazineImpact = "pistol"
 
 SWEP.ReloadUpInTime = 1
@@ -297,10 +301,10 @@ SWEP.Attachments = {
         AttachSound = "TacRP/weapons/silencer_on.wav",
         DetachSound = "TacRP/weapons/silencer_off.wav",
         VMScale = 0.6,
-        WMScale = 0.5,
+        WMScale = 0.6,
         Pos_VM = Vector(-0.6, 0, 10.3),
         Ang_VM = Angle(90, 0, 0),
-        Pos_WM = Vector(0, 9.25, -1.5),
+        Pos_WM = Vector(0, 11.85, -1.75),
         Ang_WM = Angle(0, -90, 0),
     },
     [3] = {
