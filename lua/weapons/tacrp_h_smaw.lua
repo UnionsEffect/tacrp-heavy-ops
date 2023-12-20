@@ -27,7 +27,7 @@ SWEP.WorldModel = "models/weapons/tacint_shark/w_smaw.mdl"
 
 SWEP.NoRanger = true
 
-SWEP.Slot = 3
+SWEP.Slot = 2
 SWEP.SlotAlt = 4
 
 SWEP.BalanceStats = {
