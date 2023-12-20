@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP (Special)"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "6Launcher"
 
-SWEP.Description = "Man-portable bunker buster. Laser guided rockets travel slowly, but has a larger explosion. Can mount optics."
+SWEP.Description = "Man-portable bunker buster. Laser guided rockets travel slowly, but has a larger explosion. Can mount optics and has a built in Corner-Cam."
 
 SWEP.Trivia_Caliber = "83mm Rockets"
 SWEP.Trivia_Manufacturer = "Nammo Talley"
@@ -87,6 +87,7 @@ SWEP.RecoilSpreadPenalty = 0 // extra spread per one unit of recoil
 SWEP.CanBlindFire = true
 
 SWEP.Laser = true
+SWEP.BlindFireCamera = true
 SWEP.LaserPower = 4
 SWEP.LaserQCAttachment = 1
 SWEP.LaserAlwaysAccurate = true

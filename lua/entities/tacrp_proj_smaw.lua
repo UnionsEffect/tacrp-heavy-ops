@@ -35,7 +35,7 @@ ENT.AlwaysSteer = false
 function ENT:OnThink()
     if CLIENT or (self.SteerDelay + self.SpawnTime) > CurTime() then return end
     local wep = self.Inflictor
-    if IsValid(wep) and wep:GetTactical() and !wep:GetReloading() and IsValid(wep:GetOwner()) and wep:GetOwner():IsPlayer() and wep:GetOwner():Alive() then
+    if IsValid(wep) and wep:GetTactical() and !wep:GetIsSprinting() and !wep:GetReloading() and IsValid(wep:GetOwner()) and wep:GetOwner():IsPlayer() and wep:GetOwner():Alive() then
         local pos_tr = wep:GetMuzzleOrigin()
         local ang = wep:GetShootDir()
 

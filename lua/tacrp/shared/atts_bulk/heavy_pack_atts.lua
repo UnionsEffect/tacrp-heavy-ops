@@ -111,3 +111,24 @@ ATT.Override_MidAirSpreadPenalty = 0
 ATT.Override_HipFireSpreadPenalty = 0
 
 TacRP.LoadAtt(ATT, "ammo_smaw_tri")
+
+
+-- SMAW Nikita
+ATT = {}
+
+ATT.PrintName = "Nikita"
+ATT.FullName = "SMAW Nikita Hover Rocket"
+ATT.Icon = Material("entities/tacrp_att_bolt_light.png", "mips smooth")
+ATT.Description = "A very slow and very maneuverable rocket."
+ATT.Pros = {"att.procon.rocket.steer"}
+ATT.Cons = {"att.procon.rocket.speed", "att.procon.armdelay"}
+
+ATT.Category = "ammo_smaw"
+
+ATT.SortOrder = 1
+
+ATT.Override_ShootEnt = "tacrp_proj_smaw_nikita"
+
+ATT.Mult_ShootEntForce = 0.15
+
+TacRP.LoadAtt(ATT, "ammo_smaw_nikita")
