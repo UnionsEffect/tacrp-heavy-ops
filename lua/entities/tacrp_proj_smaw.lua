@@ -42,6 +42,8 @@ function ENT:OnThink()
         if tr.Hit then
             self.TargetAng = (tr.HitPos - self:GetPos()):Angle()
         end
+    else
+        self.TargetAng = nil
     end
 end
 
@@ -107,9 +109,9 @@ function ENT:Detonate()
     local attacker = self.Attacker or self:GetOwner()
 
     if self.NPCDamage then
-        util.BlastDamage(self, attacker, self:GetPos(), 400, 120)
+        util.BlastDamage(self, attacker, self:GetPos(), 328, 120)
     else
-        util.BlastDamage(self, attacker, self:GetPos(), 400, 300)
+        util.BlastDamage(self, attacker, self:GetPos(), 328, 250)
         self:FireBullets({
             Attacker = attacker,
             Damage = 600,
@@ -121,7 +123,7 @@ function ENT:Detonate()
             IgnoreEntity = self,
             Callback = function(atk, btr, dmginfo)
                 dmginfo:SetDamageType(DMG_AIRBOAT + DMG_BLAST) // airboat damage for helicopters and LVS vehicles
-                dmginfo:SetDamageForce(self:GetForward() * 15000) // LVS uses this to calculate penetration!
+                dmginfo:SetDamageForce(self:GetForward() * 22000) // LVS uses this to calculate penetration!
             end,
         })
     end
