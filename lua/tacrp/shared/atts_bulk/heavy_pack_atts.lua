@@ -73,7 +73,7 @@ ATT = {}
 ATT.PrintName = "mlg"
 ATT.FullName = "mlg quickscoper sound"
 
-ATT.Icon = Material("entities/tacrp_att_ammo_1858_45colt.png", "mips smooth")
+ATT.Icon = Material("entities/mlg_logo.png", "mips smooth")
 ATT.Description = "this one's going in the montage."
 ATT.Pros = {"fucking awesome"}
 
@@ -89,7 +89,7 @@ ATT = {}
 
 ATT.PrintName = "Laser"
 ATT.FullName = "Surefire Laser Scope"
-ATT.Icon = Material("entities/tacrp_att_tac_laser.png", "mips smooth")
+ATT.Icon = Material("entities/att_hardballer_laser.png", "mips smooth")
 ATT.Description = "Primitive bulky laser module that makes aiming almost unnecessary."
 ATT.Pros = {"att.procon.laser", "Hipfire spread"}
 ATT.Cons = {"att.procon.visible", "Handling"}
