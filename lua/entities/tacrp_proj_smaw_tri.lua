@@ -29,10 +29,10 @@ ENT.FlareSizeMax = 64
 ENT.SteerSpeed = 120
 ENT.SteerDelay = 0.15
 
-ENT.MaxSpeed = 6000
-ENT.Acceleration = 3000
-ENT.SteerBrake = 12000
-ENT.MinSpeed = 1200
+ENT.MaxSpeed = 4000
+ENT.Acceleration = 4000
+ENT.SteerBrake = 15000
+ENT.MinSpeed = 1000
 
 ENT.AlwaysSteer = true
 
@@ -44,8 +44,6 @@ ENT.ExplodeSounds = {
 
 function ENT:OnInitialize()
     if CLIENT then return end
-    -- self:SetAngles(self:GetAngles() + Angle(-30, 0, 0))
-    -- self:GetPhysicsObject():SetVelocityInstantaneous(self:GetForward() * self:GetVelocity():Length())
     local wep = self.Inflictor
     if IsValid(wep) and !wep:GetTactical() then
         local pos_tr = wep:GetMuzzleOrigin()
