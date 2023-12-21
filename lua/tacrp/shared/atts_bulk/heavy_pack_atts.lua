@@ -88,14 +88,14 @@ TacRP.LoadAtt(ATT, "sound_m200_mlg")
 ATT = {}
 
 ATT.PrintName = "Laser"
-ATT.FullName = "Surefire Laser Scope"
+ATT.FullName = "Hardballer Surefire Laser Scope"
 ATT.Icon = Material("entities/tacrp_att_tac_laser.png", "mips smooth")
 ATT.Description = "Primitive bulky laser module that makes aiming almost unnecessary."
-ATT.Pros = {"att.procon.laser", "Hipfire spread"}
-ATT.Cons = {"att.procon.visible", "Handling"}
+ATT.Pros = {"att.procon.laser", "stat.hipfirespread"}
+ATT.Cons = {"att.procon.visible", "rating.handling"}
 
-ATT.Model = "models/weapons/tacint/addons/laser_mounted.mdl"
-ATT.Scale = 1
+-- ATT.Model = "models/weapons/tacint/addons/laser_mounted.mdl"
+-- ATT.Scale = 1
 
 ATT.Category = "hardballer_laser"
 
@@ -103,12 +103,16 @@ ATT.SortOrder = 1
 
 ATT.Laser = true
 ATT.CanToggle = true
+ATT.LaserQCAttachmentVM = 4
+ATT.LaserQCAttachmentWM = 1
 
-ATT.Mult_HipFireSpreadPenalty = 0.9
-ATT.Mult_AimDownSightsTime = 1.2
+ATT.Mult_HipFireSpreadPenalty = 0.75
+ATT.Mult_AimDownSightsTime = 1.25
 ATT.Mult_SprintToFireTime = 1.25
 
 ATT.TacticalName = "Laser"
+
+ATT.InstalledElements = {"lazur"}
 
 TacRP.LoadAtt(ATT, "hardballer_laser")
 

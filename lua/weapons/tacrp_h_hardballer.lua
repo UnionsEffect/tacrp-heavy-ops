@@ -31,21 +31,6 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 32,
-        Damage_Min = 6,
-        RPM = 550,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 3.25, // still able to one-shot before falloff
-            [HITGROUP_CHEST] = 1,
-            [HITGROUP_STOMACH] = 1.25,
-            [HITGROUP_LEFTARM] = 1,
-            [HITGROUP_RIGHTARM] = 1,
-            [HITGROUP_LEFTLEG] = 0.75,
-            [HITGROUP_RIGHTLEG] = 0.75,
-            [HITGROUP_GEAR] = 0.9
-        },
-
         MoveSpeedMult = 1,
         ShootingSpeedMult = 1,
         SightedSpeedMult = 1,
@@ -53,20 +38,7 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 1,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 30,
-        Damage_Min = 10,
-        Range_Min = 400,
-        Range_Max = 1800,
-        RPM = 200,
-
-        Spread = 0.007,
-
-        RecoilResetInstant = true,
-        RecoilMaximum = 3.5,
-        RecoilResetTime = 0.24,
-        RecoilDissipationRate = 6,
-        RecoilFirstShotMult = 1,
-        RecoilSpreadPenalty = 0.008,
+        -- TODO
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2.5,
@@ -112,15 +84,15 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 28
-SWEP.Damage_Min = 9
-SWEP.Range_Min = 400 // distance for which to maintain maximum damage
-SWEP.Range_Max = 1800 // distance at which we drop to minimum damage
+SWEP.Damage_Max = 30
+SWEP.Damage_Min = 18
+SWEP.Range_Min = 600 // distance for which to maintain maximum damage
+SWEP.Range_Max = 2400 // distance at which we drop to minimum damage
 SWEP.Penetration = 3 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.55
-SWEP.ArmorBonus = 0.5
+SWEP.ArmorPenetration = 0.65
+SWEP.ArmorBonus = 1
 
-SWEP.MuzzleVelocity = 8000
+SWEP.MuzzleVelocity = 12000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 4,
@@ -137,24 +109,24 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 350
+SWEP.RPM = 250
 
 SWEP.Spread = 0.005
-SWEP.RecoilSpreadPenalty = 0.006
-SWEP.HipFireSpreadPenalty = 0.01
+SWEP.RecoilSpreadPenalty = 0.01
+SWEP.HipFireSpreadPenalty = 0.025
 
 SWEP.ShootTimeMult = 0.6
 
-SWEP.RecoilResetInstant = false
+SWEP.RecoilResetInstant = true
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 4
-SWEP.RecoilResetTime = 0.01
-SWEP.RecoilDissipationRate = 18
-SWEP.RecoilFirstShotMult = 0.8
+SWEP.RecoilMaximum = 2
+SWEP.RecoilResetTime = 0.1
+SWEP.RecoilDissipationRate = 5
+SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 2
 
-SWEP.RecoilKick = 8
+SWEP.RecoilKick = 6
 SWEP.RecoilStability = 0.6
 
 SWEP.CanBlindFire = true
@@ -167,8 +139,8 @@ SWEP.SightedSpeedMult = 0.8
 
 SWEP.ReloadSpeedMult = 0.75
 
-SWEP.AimDownSightsTime = 0.25
-SWEP.SprintToFireTime = 0.25
+SWEP.AimDownSightsTime = 0.28
+SWEP.SprintToFireTime = 0.26
 
 // hold types
 
@@ -193,6 +165,9 @@ SWEP.SprintPos = Vector(2, 0, -12)
 
 SWEP.SightAng = Angle(5.05, 0.1, 0)
 SWEP.SightPos = Vector(-2.35, 0, -3.6)
+
+SWEP.CorrectivePos = Vector(-1.47, 0, 0)
+SWEP.CorrectiveAng = Angle(-5, 5, 0)
 
 SWEP.HolsterVisible = true
 SWEP.HolsterSlot = TacRP.HOLSTER_SLOT_PISTOL
@@ -294,6 +269,20 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     [1] = {
+        PrintName = "Tactical",
+        Category = {"optic_pistol", "hardballer_laser"},
+        Bone = "slide",
+        WMBone = "Box01",
+        AttachSound = "TacRP/weapons/optic_on.wav",
+        DetachSound = "TacRP/weapons/optic_off.wav",
+        VMScale = 1,
+        WMScale = 1,
+        Pos_VM = Vector(0, 0, 0.4),
+        Ang_VM = Angle(0, -90, 0),
+        Pos_WM = Vector(0, -1, -1),
+        Ang_WM = Angle(0, -90, 0),
+    },
+    [2] = {
         PrintName = "Muzzle",
         Category = "silencer",
         Bone = "barrel",
@@ -308,37 +297,30 @@ SWEP.Attachments = {
         Ang_WM = Angle(0, -90, 0),
     },
     [3] = {
-        PrintName = "Tactical",
-        Category = "hardballer_laser",
-		InstalledElements = {"lazur"},
-        AttachSound = "TacRP/weapons/flashlight_on.wav",
-        DetachSound = "TacRP/weapons/flashlight_off.wav",
-    },
-    [4] = {
         PrintName = "Accessory",
         Category = {"acc", "acc_extmag_pistol2", "acc_holster", "acc_brace"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [5] = {
+    [4] = {
         PrintName = "Bolt",
         Category = {"bolt_automatic"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [6] = {
+    [5] = {
         PrintName = "Trigger",
         Category = {"trigger_semi"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [7] = {
+    [6] = {
         PrintName = "Ammo",
         Category = {"ammo_pistol"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [8] = {
+    [7] = {
         PrintName = "Perk",
         Category = {"perk", "perk_melee", "perk_shooting", "perk_reload"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
