@@ -183,3 +183,26 @@ ATT.SortOrder = 1
 ATT.Override_ShootEnt = "tacrp_proj_smaw_tandem"
 
 TacRP.LoadAtt(ATT, "ammo_smaw_tandem")
+
+-- 25mm Stunstorm
+ATT = {}
+
+ATT.PrintName = "Stunstorm"
+ATT.FullName = "25mm Stunstorm Grenades"
+ATT.Icon = Material("entities/tacrp_att_ammo_40mm_concussion.png", "mips smooth")
+ATT.Description = "Grenades that briefly incapacitate the target."
+ATT.Pros = {"att.procon.flash"}
+ATT.Cons = {"stat.rpm", "stat.damage", "stat.muzzlevelocity"}
+
+ATT.Category = "ammo_25mm"
+
+ATT.SortOrder = 1
+
+ATT.Mult_RPM = 60 / 90
+ATT.Override_ShootEnt = "tacrp_proj_25mm_stun"
+ATT.Mult_ShootEntForce = 0.75
+
+ATT.Override_Damage_Max = 75
+ATT.Override_Damage_Min = 75
+
+TacRP.LoadAtt(ATT, "ammo_25mm_stun")

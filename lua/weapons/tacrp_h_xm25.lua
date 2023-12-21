@@ -77,11 +77,10 @@ SWEP.BodyDamageMultipliers = {
 }
 
 
-SWEP.Damage_Max = 200 // just to fool the ratings
-SWEP.Damage_Min = 200
+SWEP.Damage_Max = 100 // just to fool the ratings
+SWEP.Damage_Min = 100
 SWEP.Range_Max = 5000
 SWEP.Range_Min = 2000
-
 
 SWEP.MuzzleVelocity = 2800
 
@@ -91,24 +90,23 @@ SWEP.Num = 1
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 70
+SWEP.RPM = 90
 
-SWEP.Spread = 0
+SWEP.Spread = 0.01
 
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 2
-SWEP.RecoilResetTime = 0.2 // time after you stop shooting for recoil to start dissipating
+SWEP.RecoilMaximum = 2.5
+SWEP.RecoilResetTime = 0.4 // time after you stop shooting for recoil to start dissipating
 SWEP.RecoilDissipationRate = 2
 SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
 
-SWEP.RecoilVisualKick = 5
-SWEP.RecoilVisualShake = 2
+SWEP.RecoilVisualKick = 4
 
-SWEP.RecoilKick = 15
+SWEP.RecoilKick = 12
 
-SWEP.RecoilSpreadPenalty = 0
+SWEP.RecoilSpreadPenalty = 0.1
 SWEP.HipFireSpreadPenalty = 0.075
-SWEP.PeekPenaltyFraction = 0.15
+SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.CanBlindFire = true
 
@@ -219,19 +217,19 @@ SWEP.DeployTimeMult = 3
 // attachments
 
 SWEP.Attachments = {
-    --[1] = {
-        --PrintName = "Ammo",
-        --Category = "ammo_40mm",
-        --AttachSound = "TacRP/weapons/m320/shell_in-1.wav",
-        --DetachSound = "TacRP/weapons/m320/shell_out-1.wav",
-    --},
     [1] = {
+        PrintName = "Ammo",
+        Category = "ammo_25mm",
+        AttachSound = "TacRP/weapons/m320/shell_in-1.wav",
+        DetachSound = "TacRP/weapons/m320/shell_out-1.wav",
+    },
+    [2] = {
         PrintName = "Accessory",
         Category = {"acc", "acc_holster"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
-    [2] = {
+    [3] = {
         PrintName = "Perk",
         Category = {"perk", "perk_shooting", "perk_reload", "perk_melee"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
