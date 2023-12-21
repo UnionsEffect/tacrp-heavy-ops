@@ -20,7 +20,7 @@ SWEP.Trivia_Year = "1980"
 SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = [[
 Assets: Terminator: Resistance (originally ported by Sirgibsalot)
-Sounds: speedonerd
+Sounds: Navaro
 Animation: Tactical Intervention
 ]]
 
@@ -223,7 +223,7 @@ local path = "TacRP/weapons/gsr1911/gsr1911_"
 local path1 = "Tacint_shark/hardballer/"
 
 SWEP.Sound_Shoot = "^" .. path1 .. "hardballer_fire.wav"
-SWEP.Sound_Shoot_Silenced = "TacRP/weapons/gsr1911/gsr1911_fire_silenced-1.wav"
+SWEP.Sound_Shoot_Silenced = path1 .. "shots.wav"
 
 SWEP.Vol_Shoot = 110
 SWEP.ShootPitchVariance = 2.5 // amount to vary pitch by each shot
@@ -357,6 +357,6 @@ end
 
 addsound("tacint_hardballer.Clip_In", path1 .. "clipin.wav")
 addsound("tacint_hardballer.Clip_Out", path1 .. "clipout.wav")
-addsound("tacint_hardballer.Slide_Shut", path1 .. "slide_shut.wav")
-addsound("tacint_hardballer.Slide_Back", path1 .. "slide_back.wav")
-addsound("tacint_hardballer.Slide_Forward", path1 .. "slide_shut.wav")
+addsound("tacint_hardballer.Slide_Shut", path1 .. "sliderelease2.wav")
+addsound("tacint_hardballer.Slide_Back", path1 .. "SlideBack.wav")
+addsound("tacint_hardballer.Slide_Forward", path1 .. "sliderelease.wav")
