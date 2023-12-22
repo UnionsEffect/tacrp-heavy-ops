@@ -138,15 +138,13 @@ end)
 
 hook.Add( "SetupPlayerVisibility", "TacRP_Nikita_SetupPlayerVisibility", function( ply, viewEntity )
     local wep = ply:GetActiveWeapon()
-    if IsValid(wep) and wep.ArcticTacRP and wep:GetClass() == "tacrp_h_smaw" and wep:GetTactical() and !wep:GetIsSprinting() and !wep:GetReloading() and IsValid(wep:GetOwner()) and wep:GetOwner():IsPlayer() and wep:GetOwner():Alive() then
-        if wep:GetScopeLevel() > 0 then
-            local rocket = wep:GetCornershotEntity()
-            if IsValid(rocket) then
-                -- if !rocket:TestPVS() then -- If we don't test if the PVS is already loaded, it could crash the server.
-                    -- Is what you say, Wiki, but it doesn't JUST accept no arguments and it won't work with it. If it crashes, here's why!!
-                    AddOriginToPVS( rocket:GetPos() )
-                -- end
-            end
+    if IsValid(wep) and wep.ArcticTacRP and wep:GetClass() == "tacrp_h_smaw" and wep:GetTactical() and IsValid(wep:GetOwner()) and wep:GetOwner():IsPlayer() and wep:GetOwner():Alive() then
+        local rocket = wep:GetCornershotEntity()
+        if IsValid(rocket) then
+            -- if !rocket:TestPVS() then -- If we don't test if the PVS is already loaded, it could crash the server.
+                -- Is what you say, Wiki, but it doesn't JUST accept no arguments and it won't work with it. If it crashes, here's why!!
+                AddOriginToPVS( rocket:GetPos() )
+            -- end
         end
     end
 end )
