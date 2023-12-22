@@ -10,8 +10,8 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "1Sidearm"
 
-SWEP.Description = "Lorem ipsum."
-SWEP.Description_Quote = "Hitman quote"
+SWEP.Description = "A pair of sleek longslide pistols. Good range for akimbos, that is if you can hit anything."
+SWEP.Description_Quote = "I'll seek justice for myself. I'll choose the truth I like."
 
 SWEP.Trivia_Caliber = ".45 ACP"
 SWEP.Trivia_Manufacturer = "Arcadia Machine & Tool."
@@ -194,9 +194,9 @@ SWEP.HolsterAng = Angle(60, 5, 0)
 SWEP.ClipSize = 14
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1
+SWEP.ReloadTimeMult = 0.85
 
-SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/dual_1911.mdl"
+SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/hardballer.mdl"
 SWEP.DropMagazineImpact = "pistol"
 SWEP.DropMagazineAmount = 2
 
