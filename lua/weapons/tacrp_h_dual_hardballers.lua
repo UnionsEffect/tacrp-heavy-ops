@@ -97,21 +97,22 @@ SWEP.TTTReplace = {["weapon_zm_pistol"] = 0.5, ["weapon_ttt_glock"] = 0.5}
 
 // "ballistics"
 
-SWEP.Damage_Max = 34
-SWEP.Damage_Min = 8
-SWEP.Range_Min = 400
-SWEP.Range_Max = 1800
+SWEP.Damage_Max = 30
+SWEP.Damage_Min = 18
+SWEP.Range_Min = 600
+SWEP.Range_Max = 2400
 SWEP.Penetration = 4
-SWEP.ArmorPenetration = 0.75
+SWEP.ArmorPenetration = 0.65
+SWEP.ArmorBonus = 1
 
-SWEP.MuzzleVelocity = 9500
+SWEP.MuzzleVelocity = 12000
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 4.5,
+    [HITGROUP_HEAD] = 4,
     [HITGROUP_CHEST] = 1,
-    [HITGROUP_STOMACH] = 1,
-    [HITGROUP_LEFTARM] = 0.9,
-    [HITGROUP_RIGHTARM] = 0.9,
+    [HITGROUP_STOMACH] = 1.25,
+    [HITGROUP_LEFTARM] = 1,
+    [HITGROUP_RIGHTARM] = 1,
     [HITGROUP_LEFTLEG] = 0.75,
     [HITGROUP_RIGHTLEG] = 0.75,
     [HITGROUP_GEAR] = 0.9
@@ -121,25 +122,26 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 450
+SWEP.RPM = 400
 
-SWEP.Spread = 0.015
+SWEP.Spread = 0.01
 
 SWEP.MoveSpreadPenalty = 0
 SWEP.MidAirSpreadPenalty = 0.075
 SWEP.HipFireSpreadPenalty = 0
 
+SWEP.RecoilResetInstant = true
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 8
-SWEP.RecoilResetTime = 0.14
+SWEP.RecoilMaximum = 5
+SWEP.RecoilResetTime = 0.12
 SWEP.RecoilDissipationRate = 12
-SWEP.RecoilFirstShotMult = 1 // multiplier for the first shot's recoil amount
+SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 8
-SWEP.RecoilStability = 0.15
+SWEP.RecoilVisualKick = 2.5
+SWEP.RecoilKick = 10
+SWEP.RecoilStability = 0.2
 
-SWEP.RecoilSpreadPenalty = 0.004
+SWEP.RecoilSpreadPenalty = 0.0055
 
 SWEP.Sway = 0.5
 
