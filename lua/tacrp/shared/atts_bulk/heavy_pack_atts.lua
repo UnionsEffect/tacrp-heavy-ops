@@ -122,7 +122,7 @@ ATT = {}
 
 ATT.PrintName = "Tri-Attack"
 ATT.FullName = "SMAW Tri-Attack Rocket Pod"
-ATT.Icon = Material("entities/tacrp_att_bolt_light.png", "mips smooth")
+ATT.Icon = Material("entities/att_smaw_triple.png", "mips smooth")
 ATT.Description = "A trio of fast and maneuverable anti-infantry missiles."
 ATT.Pros = {"att.procon.3proj", "att.procon.rocket.speed", "att.procon.rocket.steer"}
 ATT.Cons = {"stat.spread", "att.procon.armdelay", "att.procon.rocket.payload"}
@@ -151,7 +151,7 @@ ATT = {}
 
 ATT.PrintName = "Nikita"
 ATT.FullName = "SMAW Nikita Hover Rocket Pod"
-ATT.Icon = Material("entities/tacrp_att_bolt_light.png", "mips smooth")
+ATT.Icon = Material("entities/att_smaw_nikita.png", "mips smooth")
 ATT.Description = "A very slow and very maneuverable rocket."
 ATT.Pros = {"att.procon.rocket.steer"}
 ATT.Cons = {"att.procon.rocket.speed", "att.procon.armdelay"}
@@ -171,7 +171,7 @@ ATT = {}
 
 ATT.PrintName = "Tandem"
 ATT.FullName = "SMAW Tandem Rocket Pod"
-ATT.Icon = Material("entities/tacrp_att_bolt_light.png", "mips smooth")
+ATT.Icon = Material("entities/att_smaw_tandem.png", "mips smooth")
 ATT.Description = "A powerful anti-tank rocket that takes time to accelerate."
 ATT.Pros = {"att.procon.rocket.impact", "att.procon.rocket.speed"}
 ATT.Cons = {"att.procon.rocket.payload", "att.procon.rocket.steer", "stat.muzzlevelocity"}
