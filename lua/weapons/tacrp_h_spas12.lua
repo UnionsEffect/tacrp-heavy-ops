@@ -11,6 +11,7 @@ SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "5Shotgun"
 
 SWEP.Description = "Imposing combat shotgun with dual mode operation. Stable but slow to fire. Folding stock blocks the use of optics."
+SWEP.Description_Quote = "\"Look to your own salvation!\""
 
 SWEP.Trivia_Caliber = "12 Gauge"
 SWEP.Trivia_Manufacturer = "Luigi Franchi S.p.A."
@@ -43,19 +44,13 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 1,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 8,
-        Damage_Min = 4,
-        Range_Min = 250,
-        Range_Max = 1000,
-        ClipSize = 8,
-
-        Spread = 0.03,
-        ShotgunPelletSpread = 0.015,
-        HipFireSpreadPenalty = 0.02,
-        RecoilSpreadPenalty = 0.015,
+        Damage_Max = 11,
+        Damage_Min = 6,
+        Range_Min = 300,
+        Range_Max = 1400,
 
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 2,
+            [HITGROUP_HEAD] = 1.5,
             [HITGROUP_CHEST] = 1,
             [HITGROUP_STOMACH] = 1,
             [HITGROUP_LEFTARM] = 1,
@@ -76,12 +71,8 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_PVE] = {
         Damage_Max = 10,
         Damage_Min = 5,
-        ClipSize = 6,
         Range_Min = 300,
         Range_Max = 1200,
-
-        Spread = 0.02,
-        ShotgunPelletSpread = 0.002,
 
         MoveSpeedMult = 0.9,
         ShootingSpeedMult = 0.8,

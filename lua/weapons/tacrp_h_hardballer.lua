@@ -11,7 +11,7 @@ SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "1Sidearm"
 
 SWEP.Description = "Long-slide pistol with stainless steel construction. Accurate and hits hard at range."
-SWEP.Description_Quote = "I'll be back..."
+SWEP.Description_Quote = "\"I'll be back...\""
 
 SWEP.Trivia_Caliber = ".45 ACP"
 SWEP.Trivia_Manufacturer = "Arcadia Machine & Tool."
@@ -38,11 +38,17 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 1,
     },
     [TacRP.BALANCE_TTT] = {
-        -- TODO
+        Damage_Max = 35,
+        Damage_Min = 25,
+        Range_Min = 500,
+        Range_Max = 2000,
+
+        RPM = 150,
+        ShootTimeMult = 0.8,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2.5,
-            [HITGROUP_CHEST] = 1.25,
+            [HITGROUP_CHEST] = 1,
             [HITGROUP_STOMACH] = 1,
             [HITGROUP_LEFTARM] = 0.9,
             [HITGROUP_RIGHTARM] = 0.9,
@@ -85,7 +91,7 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 // "ballistics"
 
 SWEP.Damage_Max = 30
-SWEP.Damage_Min = 18
+SWEP.Damage_Min = 20
 SWEP.Range_Min = 600 // distance for which to maintain maximum damage
 SWEP.Range_Max = 2400 // distance at which we drop to minimum damage
 SWEP.Penetration = 4 // units of metal this weapon can penetrate
@@ -177,7 +183,7 @@ SWEP.HolsterAng = Angle(90, 0, 0)
 SWEP.Sway = 1
 SWEP.ScopedSway = 0.5
 
-SWEP.FreeAimMaxAngle = 3.5
+SWEP.FreeAimMaxAngle = 5
 
 // reload
 

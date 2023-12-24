@@ -10,8 +10,8 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "1Sidearm"
 
-SWEP.Description = "A pair of sleek longslide pistols. Good range for akimbos, that is if you can hit anything."
-SWEP.Description_Quote = "I'll seek justice for myself. I'll choose the truth I like."
+SWEP.Description = "A pair of sleek longslide pistols, a high profile choice for low profile assassins.\nGood range for akimbos - if you can hit anything, that is."
+SWEP.Description_Quote = "\"I'll seek justice for myself. I'll choose the truth I like.\""
 
 SWEP.Trivia_Caliber = ".45 ACP"
 SWEP.Trivia_Manufacturer = "Arcadia Machine & Tool."
@@ -32,20 +32,6 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 37,
-        Damage_Min = 10,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 3.75,
-            [HITGROUP_CHEST] = 1,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.9,
-            [HITGROUP_RIGHTARM] = 0.9,
-            [HITGROUP_LEFTLEG] = 0.75,
-            [HITGROUP_RIGHTLEG] = 0.75,
-            [HITGROUP_GEAR] = 0.9
-        },
-
         MoveSpeedMult = 0.95,
         ShootingSpeedMult = 0.8,
         SightedSpeedMult = 1,
@@ -53,11 +39,11 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 1,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 27,
-        Damage_Min = 8,
-        Range_Min = 300,
-        Range_Max = 1600,
-        RPM = 360,
+        Damage_Max = 35,
+        Damage_Min = 25,
+        Range_Min = 200,
+        Range_Max = 1700,
+        RPM = 280,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2.5,
@@ -70,10 +56,10 @@ SWEP.BalanceStats = {
             [HITGROUP_GEAR] = 0.9
         },
 
-        ReloadTimeMult = 1.25,
+        ReloadTimeMult = 1.25 * 0.85,
 
         MoveSpeedMult = 1,
-        ShootingSpeedMult = 0.9,
+        ShootingSpeedMult = 0.8,
         MeleeSpeedMult = 1,
         SightedSpeedMult = 0.75,
         ReloadSpeedMult = 0.9,
@@ -98,7 +84,7 @@ SWEP.TTTReplace = {["weapon_zm_pistol"] = 0.5, ["weapon_ttt_glock"] = 0.5}
 // "ballistics"
 
 SWEP.Damage_Max = 30
-SWEP.Damage_Min = 18
+SWEP.Damage_Min = 20
 SWEP.Range_Min = 600
 SWEP.Range_Max = 2400
 SWEP.Penetration = 4

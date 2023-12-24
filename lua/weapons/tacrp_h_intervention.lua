@@ -42,8 +42,8 @@ SWEP.BalanceStats = {
 
         Sway = 2,
         ScopedSway = 0.1,
-		
-		RecoilKick = 12,
+
+        RecoilKick = 12,
 
         MoveSpeedMult = 0.78,
         ShootingSpeedMult = 0.55,
@@ -369,7 +369,7 @@ SWEP.Attachments = {
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
     },
-	[9] = {
+    [9] = {
         PrintName = "Sound",
         Category = {"m200_mlg"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",

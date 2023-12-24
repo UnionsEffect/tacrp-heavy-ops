@@ -34,8 +34,8 @@ SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
         Range_Min = 700,
         Range_Max = 5000,
-		
-		RecoilVisualKick = 20,
+
+        RecoilVisualKick = 20,
 
         MoveSpeedMult = 0.65,
         ShootingSpeedMult = 0.25,
@@ -268,8 +268,8 @@ SWEP.Attachments = {
         Bone = "SPR_root",
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
-		VMSCale = 1.05,
-		WMSCale = 1.05,
+        VMSCale = 1.05,
+        WMSCale = 1.05,
         Pos_VM = Vector(-3.2, -0.9, 32),
         Ang_VM = Angle(90, 0, 270),
         Pos_WM = Vector(30, 2, 0.85),

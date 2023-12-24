@@ -262,7 +262,6 @@ if engine.ActiveGamemode() == "terrortown" then
 end
 
 local last_laze_time = 0
--- local last_laze_dist = 0
 local laze_interval = 0.2
 local ccip_v = 0
 local ccip_t = 0

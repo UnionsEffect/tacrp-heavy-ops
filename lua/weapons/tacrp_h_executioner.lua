@@ -13,7 +13,7 @@ SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "2Magnum Pistol"
 
 SWEP.Description = "Massive revolver shooting small-bore shotgun shells.\nFires a lot of pellets, but spread is poor."
-SWEP.Description_Quote = "Come my friends. 'Tis not too late to seek a newer world."
+SWEP.Description_Quote = "\"Come, my friends. 'Tis not too late to seek a newer world.\""
 
 SWEP.Trivia_Caliber = ".410 Bore"
 SWEP.Trivia_Manufacturer = "Taurus"
@@ -59,20 +59,20 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 1,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 8,
+        Damage_Max = 7,
         Range_Min = 285,
         Range_Max = 1300,
         RPM = 80,
 
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 1,
+            [HITGROUP_HEAD] = 1.5,
             [HITGROUP_CHEST] = 1,
             [HITGROUP_STOMACH] = 1,
             [HITGROUP_LEFTARM] = 1,
             [HITGROUP_RIGHTARM] = 1,
-            [HITGROUP_LEFTLEG] = 0.75,
-            [HITGROUP_RIGHTLEG] = 0.75,
-            [HITGROUP_GEAR] = 0.75
+            [HITGROUP_LEFTLEG] = 1,
+            [HITGROUP_RIGHTLEG] = 1,
+            [HITGROUP_GEAR] = 1
         },
 
         RecoilMaximum = 1.5,
@@ -138,8 +138,7 @@ SWEP.FiremodeName = "Double-Action" // only used externally for firemode name di
 SWEP.RPM = 85
 
 SWEP.Spread = 0.04
-
-SWEP.ShotgunPelletSpread = 0.02
+SWEP.ShotgunPelletSpread = 0.015
 
 SWEP.ShootTimeMult = 1
 

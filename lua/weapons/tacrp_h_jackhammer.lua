@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "5Shotgun"
 
-SWEP.Description = "Bulky automatic shotgun, known for its distinctive look and prevalence in video games. Very heavy and a bit unreliable."
+SWEP.Description = "Bulky automatic shotgun with a cylinder magazine, known for its distinctive look and prevalence in video games. Quite heavy and a bit unreliable."
 SWEP.Description_Quote = "Moo, I say!"
 
 SWEP.Trivia_Caliber = "12 Gauge"
@@ -32,8 +32,9 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 10,
+        Damage_Max = 12,
         Damage_Min = 4,
+        JamFactor = 0.05,
 
         MoveSpeedMult = 0.8,
         ShootingSpeedMult = 0.5,
@@ -42,13 +43,13 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 0.9,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 11,
-        Damage_Min = 6,
+        Damage_Max = 10,
+        Damage_Min = 5,
         Range_Min = 300,
-        Range_Max = 900,
+        Range_Max = 1000,
 
+        JamFactor = 0.04,
         RPM = 200,
-
         ReloadTimeMult = 1.7,
 
         MoveSpeedMult = 0.9,
@@ -58,10 +59,9 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 0.65,
     },
     [TacRP.BALANCE_PVE] = {
-        Damage_Max = 10,
-        Damage_Min = 7,
-        Range_Min = 400,
-        Range_Max = 1200,
+        Damage_Max = 8,
+        Damage_Min = 4,
+        RPM = 200,
 
         MoveSpeedMult = 0.85,
         ShootingSpeedMult = 0.8,
@@ -76,9 +76,9 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.AssaultRifle
 // "ballistics"
 
 SWEP.Damage_Max = 12
-SWEP.Damage_Min = 5
+SWEP.Damage_Min = 6
 SWEP.Range_Min = 300
-SWEP.Range_Max = 1000
+SWEP.Range_Max = 1200
 SWEP.Penetration = 1
 SWEP.ArmorPenetration = 0.4
 SWEP.Num = 9
@@ -105,7 +105,7 @@ SWEP.RPM = 240
 SWEP.Spread = 0.05
 SWEP.ShotgunPelletSpread = 0.035
 
-SWEP.JamFactor = 0.05
+SWEP.JamFactor = 0.025
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 2

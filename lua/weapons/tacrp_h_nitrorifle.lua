@@ -21,7 +21,7 @@ SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = [[
 Assets: Far Cry 4 (Originally ported by Robotnik)
 Additional Sounds: speedonerd
-Animations: speedonerd & 8Z
+Animations: 8Z, speedonerd
 ]]
 SWEP.ViewModel = "models/weapons/tacint_shark/v_nitrorifle.mdl"
 SWEP.WorldModel = "models/weapons/tacint_shark/w_nitrorifle.mdl"
@@ -37,8 +37,10 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 1,
     },
     [TacRP.BALANCE_TTT] = {
-        Range_Min = 500,
-        Range_Max = 1500,
+        Damage_Max = 65,
+        Damage_Min = 50,
+        Range_Min = 800,
+        Range_Max = 2000,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 3,
@@ -51,7 +53,7 @@ SWEP.BalanceStats = {
             [HITGROUP_GEAR] = 0.9
         },
 
-        ReloadTimeMult = 1.2,
+        ReloadTimeMult = 1.5,
 
         MoveSpeedMult = 0.85,
         ShootingSpeedMult = 0.85,
@@ -60,14 +62,17 @@ SWEP.BalanceStats = {
         ReloadSpeedMult = 0.6,
     },
     [TacRP.BALANCE_PVE] = {
+        Damage_Max = 55,
+        Damage_Min = 35,
+
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 3,
-            [HITGROUP_CHEST] = 2,
+            [HITGROUP_CHEST] = 1,
             [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.8,
-            [HITGROUP_RIGHTARM] = 0.8,
-            [HITGROUP_LEFTLEG] = 0.5,
-            [HITGROUP_RIGHTLEG] = 0.5,
+            [HITGROUP_LEFTARM] = 1,
+            [HITGROUP_RIGHTARM] = 1,
+            [HITGROUP_LEFTLEG] = 0.75,
+            [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.9
         },
 
