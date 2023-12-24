@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP (Special)"
 SWEP.SubCatTier = "9Special"
 SWEP.SubCatType = "6Launcher"
 
-SWEP.Description = "Man-portable bunker buster. Laser guided rockets travel slowly, but has a larger explosion. Can mount optics and has a built in Corner-Cam."
+SWEP.Description = "Man-portable bunker buster with slow, powerful rockets. Laser pointer allows rocket steering when toggled on. Can mount optics and has a built in Corner-Cam."
 
 SWEP.Trivia_Caliber = "83mm Rockets"
 SWEP.Trivia_Manufacturer = "Nammo Talley"
