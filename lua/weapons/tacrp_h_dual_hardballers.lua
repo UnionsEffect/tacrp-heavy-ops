@@ -26,7 +26,7 @@ Animation: Tactical Intervention, Fesiug
 
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_dual_hardballers.mdl"
-SWEP.WorldModel = "models/weapons/tacint_shark/w_dual_1911.mdl"
+SWEP.WorldModel = "models/weapons/tacint_shark/w_dual_hardballers.mdl"
 
 SWEP.Slot = 1
 
