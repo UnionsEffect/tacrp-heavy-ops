@@ -19,7 +19,7 @@ SWEP.Trivia_Year = "1980"
 
 SWEP.Faction = TacRP.FACTION_NEUTRAL
 SWEP.Credits = [[
-Assets: Terminator: Resistance (originally ported by Sirgibsalot)
+Assets: Terminator: Resistance (port by Sirgibsalot)
 Sounds: Navaro
 Animation: Tactical Intervention
 ]]
