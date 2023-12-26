@@ -124,8 +124,8 @@ SWEP.RecoilDissipationRate = 12
 SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 2.5
-SWEP.RecoilKick = 10
-SWEP.RecoilStability = 0.2
+SWEP.RecoilKick = 9
+SWEP.RecoilStability = 0.25
 
 SWEP.RecoilSpreadPenalty = 0.0055
 
