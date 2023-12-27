@@ -4,13 +4,13 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // names and stuff
-SWEP.PrintName = "HK HK23E"
+SWEP.PrintName = "HK HK21"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "4Machine Gun"
 
-SWEP.Description = "Machine gun based on G3"
+SWEP.Description = "Machine gun based on the G3."
 
 SWEP.Trivia_Caliber = "7.62x51mm"
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
@@ -19,7 +19,7 @@ SWEP.Trivia_Year = "1111"
 SWEP.Faction = TacRP.FACTION_COALITION
 SWEP.Credits = "Assets: Tactical Intervention"
 
-SWEP.ViewModel = "models/weapons/tacint_shark/v_hk23e_beta8.mdl"
+SWEP.ViewModel = "models/weapons/tacint_shark/v_hk23e_beta10.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_mg4.mdl"
 
 SWEP.Slot = 2
@@ -213,6 +213,7 @@ SWEP.DefaultBodygroups = "000007"
 // sounds
 
 local path = "TacRP/weapons/mg4/"
+local path1 = "tacint_shark/hk23e/"
 
 SWEP.Sound_Shoot = "^" .. path .. "fire-1.wav"
 SWEP.Sound_Shoot_Silenced = "TacRP/weapons/g36k/g36k_fire_silenced-1.wav"
@@ -348,10 +349,10 @@ local function addsound(name, spath)
     })
 end
 
-addsound("TacInt_hk23e.Clip_Out",           path .. "clip_out-1.wav")
-addsound("TacInt_hk23e.Clip_In",            path .. "clip_in-1.wav")
-addsound("TacInt_hk23e.bolt_release",       path .. "bolt_release-1.wav")
-addsound("TacInt_hk23e.bolt_back",          path .. "bolt_back-1.wav")
-addsound("TacInt_hk23e.bolt_forward",       path .. "bolt_forward-1.wav")
-addsound("TacInt_hk23e.insertbullets",      path .. "insert_bullets-1.wav")
+addsound("TacInt_hk23e.Clip_Out",           path1 .. "clipout.wav")
+addsound("TacInt_hk23e.Clip_In",            path1 .. "clipin.wav")
+addsound("TacInt_hk23e.bolt_release",       path1 .. "boltforward.ogg")
+addsound("TacInt_hk23e.bolt_back",          path1 .. "boltback.ogg")
+addsound("TacInt_hk23e.bolt_forward",       path1 .. "boltforward.ogg")
+addsound("TacInt_hk23e.insertbullets",      path1 .. "belt.ogg")
 addsound("TacInt_hk23e.deploy",             path .. "deploy-1.wav")
