@@ -17,7 +17,12 @@ SWEP.Trivia_Manufacturer = "Heckler & Koch"
 SWEP.Trivia_Year = "1111"
 
 SWEP.Faction = TacRP.FACTION_COALITION
-SWEP.Credits = "Assets: Tactical Intervention"
+SWEP.Credits = [[
+Model: Twinke Masta
+Textures: NZ-Reason
+Animations: Tactical Intervention
+Sounds: Treyarch
+]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_hk23e_beta10.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_mg4.mdl"
