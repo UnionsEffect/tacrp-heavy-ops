@@ -17,7 +17,7 @@ SWEP.Trivia_Caliber = "12 Gauge"
 SWEP.Trivia_Manufacturer = "Pancor Corporation"
 SWEP.Trivia_Year = "1984"
 
-SWEP.Faction = TacRP.FACTION_NEUTRAL
+SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = [[
 Model: Soldier11, edited by speedonerd (Front sight)
 Textures: Millenia
