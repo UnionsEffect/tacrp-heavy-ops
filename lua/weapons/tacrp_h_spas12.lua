@@ -10,7 +10,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "5Shotgun"
 
-SWEP.Description = "Imposing combat shotgun with dual mode operation. Stable but slow to fire. Folding stock blocks the use of optics."
+SWEP.Description = "Imposing combat shotgun with dual mode operation. High power and stable recoil. Folding stock blocks the use of optics."
 SWEP.Description_Quote = "\"Look to your own salvation!\""
 
 SWEP.Trivia_Caliber = "12 Gauge"
@@ -32,8 +32,8 @@ SWEP.SlotAlt = 3
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 13,
-        Damage_Min = 5,
+        Damage_Max = 16,
+        Damage_Min = 7,
 
         ReloadTimeMult = 1.15,
 
@@ -86,8 +86,8 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Shotgun
 
 // "ballistics"
 
-SWEP.Damage_Max = 15
-SWEP.Damage_Min = 8
+SWEP.Damage_Max = 16
+SWEP.Damage_Min = 9
 SWEP.Range_Min = 600 // distance for which to maintain maximum damage
 SWEP.Range_Max = 1500 // distance at which we drop to minimum damage
 SWEP.Penetration = 1 // units of metal this weapon can penetrate
@@ -112,10 +112,10 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 62
+SWEP.RPM = 76
 
-SWEP.Spread = 0.03
-SWEP.ShotgunPelletSpread = 0.01
+SWEP.Spread = 0.027
+SWEP.ShotgunPelletSpread = 0.02
 
 SWEP.ShootTimeMult = 0.85
 
@@ -257,7 +257,7 @@ SWEP.Attachments = {
     },
     [2] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_sling", "acc_duffle", "acc_foldstock"},
+        Category = {"acc_extmag_shotgun", "acc", "acc_sling", "acc_duffle", "acc_foldstock"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
