@@ -264,3 +264,7 @@ if engine.ActiveGamemode() == "terrortown" then
         buyer:GiveAmmo(1, "RPG_Round")
     end
 end
+
+function SWEP:ShouldAutoReload()
+    return !IsValid(self:GetCornershotEntity())
+end
