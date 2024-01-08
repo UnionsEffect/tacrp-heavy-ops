@@ -71,12 +71,14 @@ SWEP.Damage_Max = 500 // damage at minimum range
 SWEP.Damage_Min = 250 // damage at maximum range
 SWEP.Range_Min = 1500 // distance for which to maintain maximum damage
 SWEP.Range_Max = 4000 // distance at which we drop to minimum damage
-SWEP.Penetration = 100 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 10
-SWEP.ArmorBonus = 15
+SWEP.Penetration = 55 // units of metal this weapon can penetrate
+SWEP.ArmorPenetration = 5
+SWEP.ArmorBonus = 10
+
+SWEP.DamageType = DMG_AIRBOAT
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 5,
+    [HITGROUP_HEAD] = 1,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
@@ -86,7 +88,7 @@ SWEP.BodyDamageMultipliers = {
     [HITGROUP_GEAR] = 1
 }
 
-SWEP.MuzzleVelocity = 16000
+SWEP.MuzzleVelocity = 15000
 
 SWEP.ShootTimeMult = 1.5
 
