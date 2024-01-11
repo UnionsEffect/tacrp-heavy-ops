@@ -4,17 +4,17 @@ SWEP.Spawnable = false // WIP
 AddCSLuaFile()
 
 // names and stuff
-SWEP.PrintName = "HK HK21"
+SWEP.PrintName = "HK HK21E"
 SWEP.Category = "Tactical RP"
 
 SWEP.SubCatTier = "1Elite"
 SWEP.SubCatType = "4Machine Gun"
 
-SWEP.Description = "Machine gun based on the G3."
+SWEP.Description = "Belt-fed machine gun variant of a classic battle rifle. Features burst-fire."
 
 SWEP.Trivia_Caliber = "7.62x51mm"
 SWEP.Trivia_Manufacturer = "Heckler & Koch"
-SWEP.Trivia_Year = "1111"
+SWEP.Trivia_Year = "1961"
 
 SWEP.Faction = TacRP.FACTION_COALITION
 SWEP.Credits = [[
@@ -118,7 +118,9 @@ SWEP.MuzzleVelocity = 17500
 
 // misc. shooting
 
-SWEP.Firemode = 2
+SWEP.Firemodes = {2, -3, 1}
+SWEP.RunawayBurst = true
+SWEP.PostBurstDelay = 0.2
 
 SWEP.RPM = 750
 
