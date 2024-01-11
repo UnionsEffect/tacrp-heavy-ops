@@ -1,5 +1,5 @@
 SWEP.Base = "tacrp_base"
-SWEP.Spawnable = false // WIP
+SWEP.Spawnable = true // WIP
 
 AddCSLuaFile()
 
